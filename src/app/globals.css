@@ -37,59 +37,27 @@
 .bg-grid-subtle {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(100, 116, 139, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(100, 116, 139, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(100, 116, 139, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(100, 116, 139, 0.04) 1px, transparent 1px);
 }
 
-.bg-dots-subtle {
-  background-image: radial-gradient(rgba(100, 116, 139, 0.12) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-/* Glassmorphism helpers */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.85);
+/* Minimal glass navigation */
+.glass-nav {
+  background: rgba(248, 250, 252, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-}
-
-.glass-nav {
-  background: rgba(248, 250, 252, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-/* Custom interactive card hover effects */
+/* Refined, subtle card hover effect */
 .card-hover-effect {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
 }
 
 .card-hover-effect:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px -10px rgba(51, 65, 85, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -6px rgba(51, 65, 85, 0.06);
   border-color: #CBD5E1;
-}
-
-/* Subtle glowing pulse animations */
-@keyframes subtle-pulse {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
-}
-
-@keyframes line-flow {
-  0% { stroke-dashoffset: 100; }
-  100% { stroke-dashoffset: 0; }
-}
-
-@keyframes float-gentle {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-
-.animate-float {
-  animation: float-gentle 6s ease-in-out infinite;
 }
 
 /* Reduced motion accessibility */
@@ -100,14 +68,11 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .animate-float {
-    animation: none !important;
-  }
 }
 
 /* Custom minimal scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
   background: #F8FAFC;

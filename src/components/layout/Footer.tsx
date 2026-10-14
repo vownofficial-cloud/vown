@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/data/siteConfig";
 import { Logo } from "@/components/brand/Logo";
-import { Mail, ArrowUpRight, Shield, Terminal } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/Icons";
 
 export function Footer() {
@@ -23,7 +23,7 @@ export function Footer() {
           
           {/* Brand Info & Statement */}
           <div className="md:col-span-5 space-y-4">
-            <Logo variant="wordmark" size="md" showDomainBadge />
+            <Logo variant="wordmark" size="md" href="/" showDomainBadge />
             <p className="text-sm text-[#475569] leading-relaxed max-w-sm">
               VOwn builds intelligent digital experiences through AI automation, seamless
               integrations, and modern web technology.
@@ -33,16 +33,16 @@ export function Footer() {
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                 vown.site
               </span>
-              <span className="text-xs text-[#94A3B8]">Official Headquarters</span>
+              <span className="text-xs text-[#94A3B8]">Technology Studio</span>
             </div>
           </div>
 
-          {/* Nav Links Column 1: Navigation */}
+          {/* Nav Links Column: Pages */}
           <div className="md:col-span-3 space-y-3">
             <div className="text-xs font-mono uppercase tracking-wider text-[#0F172A] font-semibold">
-              Ecosystem
+              Pages
             </div>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm">
               {siteConfig.navItems.map((item) => (
                 <li key={item.label}>
                   <Link
@@ -56,12 +56,22 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Nav Links Column 2: Ventures & Contact */}
+          {/* Contact & Socials */}
           <div className="md:col-span-4 space-y-3">
             <div className="text-xs font-mono uppercase tracking-wider text-[#0F172A] font-semibold">
-              Ventures &amp; Channels
+              Get in Touch
             </div>
             <ul className="space-y-2.5 text-sm">
+              <li>
+                <a
+                  href={`mailto:${siteConfig.contactEmail}`}
+                  className="inline-flex items-center gap-2 text-[#334155] hover:text-[#0F172A] transition-colors group"
+                >
+                  <Mail className="w-4 h-4 text-[#64748B] group-hover:text-[#0F172A]" />
+                  <span className="font-mono">{siteConfig.contactEmail}</span>
+                  <ArrowUpRight className="w-3 h-3 text-[#94A3B8] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </li>
               <li>
                 <a
                   href={siteConfig.socials.instagramChennai}
@@ -74,21 +84,11 @@ export function Footer() {
                   <ArrowUpRight className="w-3 h-3 text-[#94A3B8] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </li>
-              <li>
-                <a
-                  href={`mailto:${siteConfig.contactEmail}`}
-                  className="inline-flex items-center gap-2 text-[#334155] hover:text-[#0F172A] transition-colors group"
-                >
-                  <Mail className="w-4 h-4 text-[#64748B] group-hover:text-[#0F172A]" />
-                  <span className="font-mono">{siteConfig.contactEmail}</span>
-                  <ArrowUpRight className="w-3 h-3 text-[#94A3B8] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
-              </li>
             </ul>
 
             <div className="pt-3">
-              <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#64748B] leading-relaxed">
-                Future ventures and digital products will be published directly under the{" "}
+              <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#64748B] leading-relaxed">
+                Independent ventures and digital products are published under the{" "}
                 <span className="font-mono text-[#0F172A]">vown.site</span> domain.
               </div>
             </div>
@@ -96,7 +96,7 @@ export function Footer() {
 
         </div>
 
-        {/* Bottom Credits & Legal Row */}
+        {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#94A3B8]">
           <div className="flex items-center gap-3">
             <span>&copy; {currentYear} VOwn. All rights reserved.</span>
@@ -104,10 +104,22 @@ export function Footer() {
             <span className="font-mono">vown.site</span>
           </div>
 
-          <div className="flex items-center gap-6">
-            <span className="hover:text-[#64748B] transition-colors cursor-default">
-              Autonomous Systems &amp; Web Flagships
-            </span>
+          <div className="flex items-center gap-4">
+            <Link href="/services" className="hover:text-[#0F172A] transition-colors">
+              Services
+            </Link>
+            <Link href="/approach" className="hover:text-[#0F172A] transition-colors">
+              Approach
+            </Link>
+            <Link href="/ventures" className="hover:text-[#0F172A] transition-colors">
+              Ventures
+            </Link>
+            <Link href="/about" className="hover:text-[#0F172A] transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="hover:text-[#0F172A] transition-colors">
+              Contact
+            </Link>
           </div>
         </div>
 

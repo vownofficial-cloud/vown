@@ -12,8 +12,8 @@ export interface SiteConfig {
   contactEmail: string;
   navItems: NavItem[];
   socials: {
-    instagramChennai?: string;
-    instagramChennaiHandle?: string;
+    instagramChennai: string;
+    instagramChennaiHandle: string;
   };
   brandStatement: string;
 }
@@ -29,12 +29,12 @@ export const siteConfig: SiteConfig = {
   brandStatement:
     "VOwn is building a connected digital ecosystem through technology, automation, and creative ideas. We focus on useful solutions that help businesses and digital ventures grow.",
   navItems: [
-    { label: "Home", href: "#hero" },
-    { label: "What We Do", href: "#services" },
-    { label: "Approach", href: "#approach" },
-    { label: "Ventures", href: "#ventures" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "What We Do", href: "/services" },
+    { label: "Approach", href: "/approach" },
+    { label: "Ventures", href: "/ventures" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ],
   socials: {
     instagramChennai: "https://www.instagram.com/chennai_vown.site/",

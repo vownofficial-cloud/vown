@@ -15,7 +15,7 @@ export function Logo({
   variant = "wordmark",
   className,
   size = "md",
-  href = "#hero",
+  href = "/",
   showDomainBadge = false,
 }: LogoProps) {
   // Dimension mappings keeping exact native proportions
