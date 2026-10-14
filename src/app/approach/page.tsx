@@ -5,9 +5,9 @@ import { CheckCircle2, ArrowUpRight, Compass, PencilRuler, Code2, RefreshCw } fr
 import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "Our Approach — How We Work",
+  title: "Our Approach — Clear Thinking. Thoughtful Building",
   description:
-    "Learn about VOwn's four-phase methodology: Discover, Design, Build, and Improve. Practical solutions and continuous improvement.",
+    "How VOwn works: Discover, Design, Build, and Improve. A clear, human process focused on practical business results.",
 };
 
 export default function ApproachPage() {
@@ -16,75 +16,75 @@ export default function ApproachPage() {
       step: "01",
       name: "Discover",
       phase: "Phase 1",
-      tagline: "Uncovering your real bottlenecks",
+      tagline: "Finding what slows you down",
       icon: Compass,
       description:
-        "We begin by understanding how your business currently operates. We look at your day-to-day workflows, identify manual bottlenecks, and map the software tools your team already uses. No guesswork—only clear, agreed-upon objectives.",
+        "We start by listening. We review your daily workflow, identify repetitive tasks that waste hours, and see which tools your team relies on. No guessing—just clear, agreed-upon priorities.",
       deliverables: [
-        "Workflow & bottleneck audit",
-        "Software ecosystem mapping",
-        "Clear scope and milestone plan",
+        "Audit of daily bottlenecks",
+        "Map of software you use",
+        "Clear priority plan and scope",
       ],
     },
     {
       step: "02",
       name: "Design",
       phase: "Phase 2",
-      tagline: "Planning with clarity and precision",
+      tagline: "Planning before building",
       icon: PencilRuler,
       description:
-        "Before writing code, we blueprint the entire solution. We map out data flows, define integration requirements, and design clean, intuitive user interfaces so every detail is clear before development starts.",
+        "Before writing any code or setting up automations, we plan the solution in plain English. You see exactly how data moves, how screens look, and what changes before we build.",
       deliverables: [
-        "Clean wireframes & UI prototypes",
-        "Data flows and API schemas",
-        "Milestone timeline and deliverables",
+        "Simple visual layout drafts",
+        "Clear data and connection maps",
+        "Transparent timeline and milestones",
       ],
     },
     {
       step: "03",
       name: "Build",
       phase: "Phase 3",
-      tagline: "Engineering clean, reliable software",
+      tagline: "Constructing reliable solutions",
       icon: Code2,
       description:
-        "We write clean, modular, and performant code using modern standards (Next.js, TypeScript, Python). Every automation pipeline and web page is tested across multiple devices and edge cases for reliable performance.",
+        "We build dependable software and automations using modern, tested tools. Every step is tested with realistic situations so you never have to worry about broken data or unexpected errors.",
       deliverables: [
-        "Production-ready Next.js / API codebase",
-        "Automated integration & webhook pipelines",
-        "Rigorous edge-case & mobile testing",
+        "Tested automations and website",
+        "Reliable software connections",
+        "Hands-on checks across phones and desktops",
       ],
     },
     {
       step: "04",
       name: "Improve",
       phase: "Phase 4",
-      tagline: "Launching and continuous refinement",
+      tagline: "Smooth launch and continuous support",
       icon: RefreshCw,
       description:
-        "Deployment is just the beginning. We set up monitoring, help onboard your team, and continuously refine performance based on real-world use as your business moves forward.",
+        "Launching is just the beginning. We walk your team through how everything works, ensure the transition is smooth, and refine features as your business evolves.",
       deliverables: [
-        "Seamless production launch & domain setup",
-        "Live error & performance monitoring",
-        "Ongoing support and feature iterations",
+        "Smooth launch and domain setup",
+        "Team walkthrough and instructions",
+        "Ongoing updates and adjustments",
       ],
     },
   ];
 
   const principles = [
     {
-      title: "Direct Team Communication",
+      title: "Talk Directly With Builders",
       description:
-        "You work directly with the developers and designers building your system. No account-manager telephone games.",
+        "You collaborate directly with the designers and developers creating your system. No account managers or delayed replies.",
     },
     {
-      title: "Plain English Explanations",
+      title: "Always in Plain English",
       description:
-        "We explain technical trade-offs in understandable terms so you can make informed business decisions.",
+        "We avoid confusing industry buzzwords and explain every decision clearly so you can make informed business choices.",
     },
     {
       title: "You Own Everything",
       description:
-        "Code, credentials, accounts, and designs belong to your company from day one. Zero vendor lock-in.",
+        "All code, accounts, logins, and assets belong to your company from day one. No hidden retainers or vendor lock-in.",
     },
   ];
 
@@ -97,19 +97,20 @@ export default function ApproachPage() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#334155] dark:bg-slate-300" />
             <span className="text-xs font-semibold tracking-tight text-[#334155] dark:text-slate-200">
-              How We Work
+              Our Process
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            Our Approach.
+            Clear thinking.
+            <br />
+            <span className="text-[#334155] dark:text-slate-300">Thoughtful building. Continuous improvement.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            We focus on practical solutions, thoughtful design, and continuous improvement. From the
-            first conversation to long-term updates, here is how we bring your project to life.
+            Every project follows a straightforward, predictable path. You always know what is being built, how it works, and what comes next.
           </p>
         </MotionWrap>
 
-        {/* Process Stages: Refined Horizontal on Desktop, Vertical on Mobile */}
+        {/* Process Stages: Horizontal Cards */}
         <div className="mb-20 sm:mb-28">
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {stages.map((stage) => {
@@ -145,7 +146,7 @@ export default function ApproachPage() {
                     {/* Deliverables Checklist */}
                     <div className="pt-5 border-t border-slate-100 dark:border-slate-800">
                       <div className="text-[10px] font-mono uppercase tracking-wider text-[#94A3B8] dark:text-slate-500 mb-3">
-                        Key Deliverables
+                        What you get
                       </div>
                       <ul className="space-y-2">
                         {stage.deliverables.map((item) => (
@@ -188,10 +189,10 @@ export default function ApproachPage() {
         <MotionWrap delay={0.15} direction="up" className="p-8 sm:p-12 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-transparent dark:border-slate-800 shadow-xl">
           <div className="max-w-xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-white">
-              Ready to start your project?
+              Have a project in mind?
             </h3>
             <p className="text-sm text-slate-300 dark:text-slate-300 leading-relaxed">
-              We begin with a discovery conversation to understand your workflow and goals. No pressure, just a clear discussion.
+              We start with a quick, no-pressure discovery conversation to see if we&apos;re a good fit for each other.
             </p>
           </div>
           <Button href="/contact" variant="white" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>

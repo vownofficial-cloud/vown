@@ -30,19 +30,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://vown.site"),
   title: {
-    default: "VOwn — AI Automation, Integrations & Web Development",
+    default: "VOwn · Technology That Moves You Forward",
     template: "%s | VOwn",
   },
   description:
-    "VOwn builds intelligent digital experiences through AI automation, seamless integrations, and modern web technology.",
+    "We automate repetitive work, connect your tools, and build websites that help your business grow.",
   keywords: [
     "AI Automation",
     "Business Integrations",
     "Website Development",
     "VOwn",
     "vown.site",
-    "Autonomous Workflows",
-    "API Integrations",
+    "Workflow Automation",
+    "Software Integrations",
     "Next.js Development",
   ],
   authors: [{ name: "VOwn Team", url: "https://vown.site" }],
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     canonical: "https://vown.site",
   },
   openGraph: {
-    title: "VOwn — AI Automation, Integrations & Web Development",
+    title: "VOwn · Technology That Moves You Forward",
     description:
-      "VOwn builds intelligent digital experiences through AI automation, seamless integrations, and modern web technology.",
+      "We automate repetitive work, connect your tools, and build websites that help your business grow.",
     url: "https://vown.site",
     siteName: "VOwn",
     images: [
@@ -70,9 +70,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VOwn — AI Automation, Integrations & Web Development",
+    title: "VOwn · Technology That Moves You Forward",
     description:
-      "VOwn builds intelligent digital experiences through AI automation, seamless integrations, and modern web technology.",
+      "We automate repetitive work, connect your tools, and build websites that help your business grow.",
     images: ["/brand/vown-primary-logo.png"],
   },
   icons: {

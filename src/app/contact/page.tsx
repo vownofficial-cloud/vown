@@ -20,18 +20,18 @@ import {
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
-  const initialService = searchParams.get("service") || "AI Automation";
+  const initialService = searchParams.get("service") || "Automate repetitive tasks";
 
   const getServiceLabel = (param: string) => {
     switch (param) {
       case "ai-automation":
-        return "AI Automation (Workflows & Tasks)";
+        return "Automate repetitive tasks";
       case "business-integrations":
-        return "Business Integrations (Connecting Software)";
+        return "Connect my business tools";
       case "website-development":
-        return "Website Development";
+        return "Build or redesign a website";
       default:
-        return "AI Automation (Workflows & Tasks)";
+        return "Automate repetitive tasks";
     }
   };
 
@@ -64,14 +64,14 @@ function ContactFormContent() {
   const validate = () => {
     const errors: Record<string, string> = {};
     if (!formData.name.trim() || formData.name.trim().length < 2) {
-      errors.name = "Please enter your name (at least 2 characters).";
+      errors.name = "Please enter your name.";
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim() || !emailRegex.test(formData.email.trim())) {
-      errors.email = "Please provide a valid email address.";
+      errors.email = "Please enter a valid email address.";
     }
     if (!formData.message.trim() || formData.message.trim().length < 10) {
-      errors.message = "Please describe your project or inquiry (at least 10 characters).";
+      errors.message = "Please tell us briefly about what you need (at least a sentence).";
     }
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -114,14 +114,13 @@ function ContactFormContent() {
         setFormData({
           name: "",
           email: "",
-          service: "AI Automation (Workflows & Tasks)",
+          service: "Automate repetitive tasks",
           message: "",
         });
       } else {
-        // Backend key not yet configured in production environment
         setStatus("dev_mode");
         setFeedbackMessage(
-          "Your inquiry is ready. Because live server email dispatch requires RESEND_API_KEY in the deployment environment, please click below to send your message directly to admin@vown.site."
+          "Your message is ready. Click below to send it directly to admin@vown.site using your email app."
         );
         setMailtoFallback(data.data?.mailtoFallback || buildMailtoUrl());
       }
@@ -146,11 +145,13 @@ function ContactFormContent() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            Let&apos;s build something useful.
+            What&apos;s slowing you down?
+            <br />
+            <span className="text-[#334155] dark:text-slate-300">Let&apos;s fix it.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            Tell us about your project, your current workflow bottlenecks, or your questions.
-            We read and respond to every inquiry directly.
+            Tell us about a workflow bottleneck, tools you want to connect, or a website project.
+            We read every inquiry directly and reply with practical advice.
           </p>
         </MotionWrap>
 
@@ -165,14 +166,14 @@ function ContactFormContent() {
               </div>
 
               <div className="text-xs uppercase font-mono tracking-wider text-[#64748B] dark:text-slate-400 mb-1">
-                Official Email
+                Direct Email
               </div>
               <div className="text-xl font-bold text-[#0F172A] dark:text-white font-mono break-all mb-4">
                 {siteConfig.contactEmail}
               </div>
 
               <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed mb-6">
-                Whether you need automated workflows, software integrations, a new website, or want to explore working together, write to us directly.
+                Prefer email? Drop us a line directly. Whether you have a concrete project ready to build or just want to explore what&apos;s possible, we&apos;re glad to chat.
               </p>
 
               {/* Action Buttons */}
@@ -209,7 +210,7 @@ function ContactFormContent() {
             <div className="p-6 rounded-2xl bg-white/70 dark:bg-[#111827]/70 border border-[#E2E8F0] dark:border-slate-800 flex items-start gap-3">
               <Clock className="w-5 h-5 text-[#334155] dark:text-slate-300 shrink-0 mt-0.5" />
               <div className="text-xs text-[#475569] dark:text-slate-300 leading-relaxed">
-                <span className="font-semibold text-[#0F172A] dark:text-white">Direct communication.</span> All emails sent to <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span> go straight to our core team. We review every message and typically reply within one business day.
+                <span className="font-semibold text-[#0F172A] dark:text-white">Quick response.</span> All emails sent to <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span> are read directly by our team. We usually respond within one business day.
               </div>
             </div>
           </MotionWrap>
@@ -219,10 +220,10 @@ function ContactFormContent() {
             <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm">
               
               <h2 className="text-2xl font-bold text-[#0F172A] dark:text-white tracking-tight mb-2">
-                Send a Message
+                Send a Quick Note
               </h2>
               <p className="text-xs sm:text-sm text-[#64748B] dark:text-slate-400 mb-8">
-                Fill in the details below and we will get back to you promptly.
+                Share a few details below and we will get back to you promptly.
               </p>
 
               {/* Status Notifications */}
@@ -242,7 +243,7 @@ function ContactFormContent() {
                 <div className="mb-6 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-sm">
                   <div className="flex items-center gap-2 font-semibold mb-1">
                     <Info className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
-                    <span>Inquiry Ready to Send</span>
+                    <span>Inquiry Ready</span>
                   </div>
                   <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed mb-3">
                     {feedbackMessage}
@@ -323,7 +324,7 @@ function ContactFormContent() {
                 {/* Area of Interest */}
                 <div>
                   <label htmlFor="service" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
-                    Area of Interest
+                    What can we help you with?
                   </label>
                   <select
                     id="service"
@@ -331,9 +332,9 @@ function ContactFormContent() {
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 text-sm text-[#0F172A] dark:text-white focus:bg-white dark:focus:bg-[#0B0F17] focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-slate-400 focus:border-transparent transition-all"
                   >
-                    <option value="AI Automation (Workflows & Tasks)">AI Automation (Workflows &amp; Tasks)</option>
-                    <option value="Business Integrations (Connecting Software)">Business Integrations (Connecting Software)</option>
-                    <option value="Website Development">Website Development</option>
+                    <option value="Automate repetitive tasks">Automate repetitive tasks</option>
+                    <option value="Connect my business tools">Connect my business tools</option>
+                    <option value="Build or redesign a website">Build or redesign a website</option>
                     <option value="General Question">General Question</option>
                   </select>
                 </div>
@@ -341,7 +342,7 @@ function ContactFormContent() {
                 {/* Project Details */}
                 <div>
                   <label htmlFor="message" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
-                    Project Details <span className="text-rose-500">*</span>
+                    What are you looking to do? <span className="text-rose-500">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -352,7 +353,7 @@ function ContactFormContent() {
                       setFormData({ ...formData, message: e.target.value });
                       if (formErrors.message) setFormErrors({ ...formErrors, message: "" });
                     }}
-                    placeholder="Tell us what you're working on, current tools, goals, or timeline..."
+                    placeholder="Tell us what you're working on, what feels slow, or what you'd like to build..."
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#0B0F17] focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-slate-400 focus:border-transparent transition-all resize-y"
                   />
                   {formErrors.message && (
@@ -370,7 +371,7 @@ function ContactFormContent() {
                     className="w-full sm:flex-1 justify-center"
                     icon={<Send className="w-4 h-4" />}
                   >
-                    {status === "loading" ? "Processing..." : "Submit Inquiry"}
+                    {status === "loading" ? "Sending..." : "Send Message"}
                   </Button>
 
                   <a
@@ -383,7 +384,7 @@ function ContactFormContent() {
                 </div>
 
                 <div className="text-[11px] text-[#94A3B8] dark:text-slate-500 text-center pt-2">
-                  Inquiries are delivered directly to{" "}
+                  Delivered directly to{" "}
                   <span className="font-mono text-[#64748B] dark:text-slate-400">admin@vown.site</span>.
                 </div>
               </form>

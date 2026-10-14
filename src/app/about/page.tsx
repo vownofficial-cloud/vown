@@ -5,9 +5,9 @@ import { ArrowUpRight, ShieldCheck, Cpu, Sparkles, HeartHandshake } from "lucide
 import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "About VOwn — Story, Philosophy & Technology Standards",
+  title: "About VOwn — Technology Should Solve Problems, Not Create More",
   description:
-    "Learn about VOwn: our mission to build useful automation, reliable integrations, and quality websites for growing businesses.",
+    "Learn about VOwn: our mission, practical mindset, and focus on building useful digital solutions for growing businesses.",
 };
 
 export default function AboutPage() {
@@ -16,55 +16,54 @@ export default function AboutPage() {
       icon: Cpu,
       title: "Utility Over Hype",
       description:
-        "We believe technology should do a real job. We implement automation where it eliminates repetitive friction and saves hours of manual work, rather than chasing temporary industry buzzwords.",
+        "Technology should do a real job. We build automations and websites that eliminate repetitive friction and save real time, rather than chasing temporary industry buzzwords.",
     },
     {
       icon: ShieldCheck,
       title: "Reliable Craft",
       description:
-        "We build systems to last. Clean TypeScript code, resilient API error handling, and fast page loads mean your software runs smoothly without constant downtime or technical debt.",
+        "We build systems to last. Clean code, tested data connections, and fast page loads mean your software runs smoothly without constant downtime or headaches.",
     },
     {
       icon: HeartHandshake,
       title: "Honest Communication",
       description:
-        "We speak in plain English. No confusing acronyms, artificial sales pressure, or exaggerated promises. You always know what is being built, how it works, and what it costs.",
+        "We talk in plain English. No confusing acronyms, artificial sales pressure, or inflated claims. You always know what is being built, how it works, and what it costs.",
     },
     {
       icon: Sparkles,
-      title: "Continuous Craft",
+      title: "Long-Term Value",
       description:
-        "Beyond immediate project requirements, we constantly test emerging technologies and refine our tooling. We believe continuous learning leads to better, faster, and more dependable solutions for every client.",
+        "We measure success by whether your business operates better six months and two years down the road—not just on the day we launch.",
     },
   ];
 
   const focusAreas = [
     {
-      title: "Useful Automation",
+      title: "Automating Busywork",
       description:
-        "Automating invoice processing, data extraction, customer inquiry triage, and internal reporting so teams can focus on high-value human work.",
+        "Extracting data from forms, processing invoices, routing customer messages, and handling repetitive admin tasks so your team can focus on people.",
     },
     {
-      title: "Reliable Integrations",
+      title: "Connecting Your Tools",
       description:
-        "Connecting disparate CRMs, billing systems, communication tools, and databases into automated real-time pipelines with zero manual re-entry.",
+        "Linking your website, CRM, billing, and communication tools into automated pipelines with zero manual re-typing.",
     },
     {
-      title: "Quality Websites",
+      title: "Building Clear Websites",
       description:
-        "Engineering fast, mobile-first websites with clean typography, clear business messaging, and sub-second load times that turn visitors into clients.",
+        "Designing fast, responsive websites with clean typography, clear business messaging, and instant load times that turn visitors into clients.",
     },
   ];
 
-  const techStack = [
+  const toolsWeTrust = [
     "Next.js & React",
     "TypeScript",
     "Tailwind CSS",
-    "Python AI Workflows",
-    "Cloud APIs & Webhooks",
-    "Database Synchronization",
-    "Core Web Vitals Optimization",
-    "Secure Deployment",
+    "Python Workflows",
+    "Stripe & Billing APIs",
+    "CRM & Database Sync",
+    "High-Speed Cloud Hosting",
   ];
 
   return (
@@ -80,30 +79,31 @@ export default function AboutPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            About VOwn.
+            Technology should solve problems,
+            <br />
+            <span className="text-[#334155] dark:text-slate-300">not create more.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            A technology studio focused on practical software, thoughtful engineering, and enduring client partnerships.
+            VOwn is a technology studio focused on practical digital solutions that help growing businesses run smoother and save time.
           </p>
         </MotionWrap>
 
-        {/* Story & Mission Statement */}
+        {/* Philosophy & Mindset Statement */}
         <MotionWrap delay={0.2} direction="up" className="p-8 sm:p-14 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm mb-16 sm:mb-24">
           <div className="max-w-4xl">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-4">
-              Our Mission
+              Our Mindset
             </div>
             <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0F172A] dark:text-white tracking-tight leading-snug mb-8">
-              &ldquo;VOwn builds connected digital ecosystems through technology, automation,
-              and thoughtful design. We focus on useful solutions that help growing businesses operate with confidence.&rdquo;
+              &ldquo;Too much business software is slow, disconnected, and frustrating to use. We started VOwn to build the opposite: practical automations, clean websites, and tools that make daily work simpler.&rdquo;
             </blockquote>
 
             <div className="space-y-4 text-base sm:text-lg text-[#475569] dark:text-slate-300 leading-relaxed">
               <p>
-                Modern businesses frequently lose hundreds of hours every month to disconnected software, repetitive data entry, and slow, outdated websites. We founded VOwn to solve these exact frustrations with thoughtful design and reliable engineering.
+                Every day, businesses lose hours copying data between different software, answering the same questions, and fighting slow websites. Technology is supposed to help you get more done, not add to your to-do list.
               </p>
               <p>
-                We operate as a focused technology studio. When working with clients, we build practical automation workflows, connect backend tools, and engineer modern web flagships designed for longevity and real business impact.
+                We work closely with business owners and small teams to identify what&apos;s holding them back. Then we build focused, dependable solutions that remove the friction and keep working quietly in the background.
               </p>
             </div>
           </div>
@@ -146,10 +146,10 @@ export default function AboutPage() {
         <MotionWrap delay={0.1} direction="up" className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm mb-16 sm:mb-24">
           <div className="max-w-2xl mb-10">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-2">
-              What We Do Best
+              How We Help
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
-              How VOwn approaches technology.
+              Where we focus our efforts.
             </h2>
           </div>
 
@@ -163,23 +163,23 @@ export default function AboutPage() {
           </div>
         </MotionWrap>
 
-        {/* Technology Foundation */}
+        {/* Tools We Trust */}
         <MotionWrap delay={0.15} direction="up" className="p-8 sm:p-10 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white mb-16 sm:mb-24 border border-transparent dark:border-slate-800 shadow-xl">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="max-w-md">
               <div className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">
-                Engineering Stack
+                Reliable Tools
               </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                Modern, reliable technologies
+                Modern, tested technologies
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-2">
-                We select tested, established frameworks that offer long-term stability and fast performance.
+                We select tools with proven track records so your systems remain stable, secure, and fast.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2 max-w-lg">
-              {techStack.map((tech) => (
+              {toolsWeTrust.map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1.5 rounded-xl bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono"

@@ -6,9 +6,9 @@ import { BrainCircuit, Workflow, Layout, ArrowUpRight, CheckCircle2, ArrowRight 
 import { MotionWrap } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "What We Do — AI Automation, Integrations & Web Development",
+  title: "What We Do — The Right Tools. Working Smarter Together",
   description:
-    "Explore VOwn's core services: AI automation to eliminate repetitive tasks, business integrations to connect software, and modern website development.",
+    "We automate repetitive work, connect business tools, and build modern websites that help your business grow.",
 };
 
 export default function ServicesPage() {
@@ -17,87 +17,87 @@ export default function ServicesPage() {
       id: "ai-automation",
       number: "01",
       title: "AI Automation",
-      headline: "Smart workflows that eliminate repetitive daily tasks.",
+      headline: "Give repetitive tasks less of your time.",
       description:
-        "We build practical AI systems that handle time-consuming operational work. Rather than chasing novelties, we focus on workflows where automation directly eliminates bottlenecks, processes information reliably, and frees your team to focus on meaningful work.",
+        "Every company loses hours each week to repetitive digital chores: copying form responses, re-typing invoice details, or manually sorting emails. We build reliable automations that take over routine tasks so your team can focus on what actually moves your business forward.",
       icon: BrainCircuit,
-      capabilities: [
+      examples: [
         {
-          title: "Document & Data Extraction",
-          detail: "Automatically extract, validate, and format data from invoices, receipts, PDFs, and customer forms.",
+          title: "Automatic Document Processing",
+          detail: "Read and extract invoice totals, receipt numbers, and vendor details automatically with zero manual typing.",
         },
         {
-          title: "Intelligent Inquiry Routing",
-          detail: "Classify incoming emails, support tickets, and messages to dispatch them to the right team instantly.",
+          title: "Smart Inquiry Routing",
+          detail: "Sort incoming customer questions and support emails directly to the right person or department instantly.",
         },
         {
-          title: "Custom AI Assistants",
-          detail: "Deploy context-aware assistants trained on your internal documentation and operational manuals.",
+          title: "Internal Knowledge Assistants",
+          detail: "Help your team get instant answers from company guidelines, operational manuals, and product documents.",
         },
         {
-          title: "Automated Reporting & Summaries",
-          detail: "Generate automated daily summaries and operational digests from scattered system logs.",
+          title: "Automated Daily Digests",
+          detail: "Receive a simple daily summary of sales, open tickets, or system milestones directly in your inbox.",
         },
       ],
-      deliverables: "Custom prompt pipelines, privacy-first data handling, edge-case testing, and team training.",
+      outcome: "Hours saved every week, fewer manual errors, and faster response times for your customers.",
       contactParam: "ai-automation",
     },
     {
       id: "business-integrations",
       number: "02",
       title: "Business Integrations",
-      headline: "Connecting your software so data moves automatically.",
+      headline: "Make your tools work better together.",
       description:
-        "Modern businesses rely on dozens of separate applications. We connect your CRMs, billing systems, spreadsheets, and communication apps into seamless, bi-directional pipelines so information stays up to date everywhere without manual copy-pasting.",
+        "You probably use different software for email, payments, invoicing, and customer records. When those tools don't talk to each other, you waste time copying data and fixing discrepancies. We connect your systems so information moves between them automatically in real time.",
       icon: Workflow,
-      capabilities: [
+      examples: [
         {
-          title: "CRM & Database Synchronization",
-          detail: "Keep customer profiles, sales records, and contact histories synchronized across HubSpot, Salesforce, and Postgres.",
+          title: "CRM & Customer Sync",
+          detail: "When a new client signs up, their details automatically update across your CRM, email list, and project board.",
         },
         {
-          title: "Payment & Billing Webhooks",
-          detail: "Connect Stripe or accounting platforms to automatically provision user accounts, issue receipts, and notify finance.",
+          title: "Payment & Invoice Automations",
+          detail: "Connect Stripe or payment gateways to create invoices, record receipts, and update accounting records right away.",
         },
         {
-          title: "Communication Bridges",
-          detail: "Trigger automated notifications and actionable alerts in Slack, Microsoft Teams, or via SMS.",
+          title: "Instant Team Alerts",
+          detail: "Notify your team in Slack, Teams, or SMS immediately when high-priority sales leads or urgent issues arrive.",
         },
         {
-          title: "Legacy & Spreadsheet Connectors",
-          detail: "Bridge Google Sheets and older software with modern cloud APIs without disrupting current habits.",
+          title: "Spreadsheet & Database Connectors",
+          detail: "Keep Google Sheets and existing tools in sync with your live databases without forcing employees to change habits.",
         },
       ],
-      deliverables: "API orchestration, webhook monitors, zero-data-loss retry logic, and clear schema documentation.",
+      outcome: "Zero duplicate data entry, no missed customer follow-ups, and records that are always up to date.",
       contactParam: "business-integrations",
     },
     {
       id: "website-development",
       number: "03",
       title: "Website Development",
-      headline: "Fast, modern websites designed around clear business goals.",
+      headline: "Turn your online presence into a better business asset.",
       description:
-        "We build clean, responsive digital flagships engineered for speed, clarity, and trust. Using modern Next.js and React, we ensure your website loads in under a second, looks impeccable on mobile, and turns visitors into clients.",
+        "Your website is often the first impression a potential client has of your business. If it loads slowly, looks cluttered on mobile, or makes it hard to understand what you do, visitors leave. We design clean, ultra-fast websites that clearly communicate your value and make contacting you effortless.",
       icon: Layout,
-      capabilities: [
+      examples: [
         {
-          title: "Modern Next.js & React Architecture",
-          detail: "Engineered with clean TypeScript, component modularity, and server-side rendering for optimal speed.",
+          title: "Fast Loading on Any Device",
+          detail: "Pages load in less than a second on mobile phones and desktop computers so visitors never bounce in frustration.",
         },
         {
-          title: "Responsive & Accessible Design",
-          detail: "Meticulously tested layouts across mobile, tablet, and desktop screens with full accessibility compliance.",
+          title: "Clear, Compelling Messaging",
+          detail: "Clean typography and intuitive layout that explain what you do clearly within the first five seconds.",
         },
         {
-          title: "Core Web Vitals & SEO Setup",
-          detail: "Sub-second load times, structured Schema.org data, clean OpenGraph tags, and semantic HTML5.",
+          title: "Frictionless Contact & Booking",
+          detail: "Simple inquiry forms that route directly to your inbox, letting interested leads reach you in seconds.",
         },
         {
-          title: "Easy Content Management",
-          detail: "Intuitive content editing options that empower your team to update copy and pages without writing code.",
+          title: "Easy to Edit and Update",
+          detail: "Built on modern frameworks so you can quickly update text, add new offerings, or announce changes.",
         },
       ],
-      deliverables: "Production Next.js codebase, custom domain deployment, SEO verification, and ongoing maintenance.",
+      outcome: "A credible digital home that earns customer trust and turns visitors into new inquiries.",
       contactParam: "website-development",
     },
   ];
@@ -111,15 +111,16 @@ export default function ServicesPage() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#334155] dark:bg-slate-300" />
             <span className="text-xs font-semibold tracking-tight text-[#334155] dark:text-slate-200">
-              Core Capabilities
+              What We Do
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            What We Do.
+            The right tools.
+            <br />
+            <span className="text-[#334155] dark:text-slate-300">Working smarter together.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            We build smart automation, connect your business software, and develop clean modern
-            websites tailored to your goals. Honest engineering, transparent communication, and zero unnecessary complexity.
+            We solve the everyday digital friction that holds businesses back. Here is exactly what we build and how it helps you.
           </p>
         </MotionWrap>
 
@@ -167,52 +168,52 @@ export default function ServicesPage() {
                       className="shrink-0 self-start md:self-auto"
                       icon={<ArrowUpRight className="w-3.5 h-3.5" />}
                     >
-                      Discuss This Service
+                      Ask About This Service
                     </Button>
                   </div>
 
-                  {/* Description */}
+                  {/* Problem & Solution Explanation */}
                   <div className="py-8 border-b border-[#F1F5F9] dark:border-slate-800/80">
                     <p className="text-base sm:text-lg text-[#334155] dark:text-slate-300 leading-relaxed max-w-4xl">
                       {service.description}
                     </p>
                   </div>
 
-                  {/* Capabilities Grid */}
+                  {/* Practical Examples */}
                   <div className="pt-8">
                     <div className="text-xs font-mono uppercase tracking-wider text-[#94A3B8] dark:text-slate-500 mb-6">
-                      What We Build &amp; Support
+                      Everyday Examples &amp; Solutions
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {service.capabilities.map((cap) => (
+                      {service.examples.map((item) => (
                         <div
-                          key={cap.title}
+                          key={item.title}
                           className="p-5 rounded-2xl bg-[#F8FAFC] dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 flex flex-col justify-between"
                         >
                           <div>
                             <div className="flex items-center gap-2 text-sm font-bold text-[#0F172A] dark:text-white mb-1.5">
-                              <CheckCircle2 className="w-4 h-4 text-[#334155] dark:text-slate-300 shrink-0" />
-                              <span>{cap.title}</span>
+                              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                              <span>{item.title}</span>
                             </div>
                             <p className="text-xs sm:text-sm text-[#64748B] dark:text-slate-400 leading-relaxed">
-                              {cap.detail}
+                              {item.detail}
                             </p>
                           </div>
                         </div>
                       ))}
                     </div>
 
-                    {/* Deliverables Summary */}
+                    {/* Practical Outcome Box */}
                     <div className="mt-8 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
                       <div>
-                        <span className="font-semibold text-[#0F172A] dark:text-white">Core Outcomes: </span>
-                        <span className="text-[#475569] dark:text-slate-300">{service.deliverables}</span>
+                        <span className="font-semibold text-[#0F172A] dark:text-white">Practical Outcome: </span>
+                        <span className="text-[#475569] dark:text-slate-300">{service.outcome}</span>
                       </div>
                       <Link
                         href={`/contact?service=${service.contactParam}`}
                         className="font-semibold text-[#0F172A] dark:text-white hover:underline inline-flex items-center gap-1 shrink-0"
                       >
-                        <span>Inquire now</span>
+                        <span>Discuss your setup</span>
                         <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
@@ -227,10 +228,10 @@ export default function ServicesPage() {
         <MotionWrap delay={0.15} direction="up" className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-transparent dark:border-slate-800 shadow-xl">
           <div className="max-w-xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-white">
-              Need a tailored system combination?
+              Not sure which service you need first?
             </h3>
             <p className="text-sm text-slate-300 dark:text-slate-300 leading-relaxed">
-              Many projects require both custom integrations and modern web development. Tell us what you need and we will propose a practical plan.
+              Tell us about your current day-to-day workflow. We&apos;ll give you an honest recommendation on the easiest place to start saving time.
             </p>
           </div>
           <Button href="/contact" variant="white" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>

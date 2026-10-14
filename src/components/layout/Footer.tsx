@@ -24,8 +24,7 @@ export function Footer() {
           <div className="md:col-span-5 space-y-4">
             <Logo variant="wordmark" size="md" href="/" showDomainBadge />
             <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed max-w-sm">
-              VOwn builds intelligent digital experiences through AI automation, seamless
-              integrations, and modern web technology.
+              Less busywork. More possibilities. We automate repetitive tasks, connect your business tools, and build websites that help you grow.
             </p>
             <div className="flex items-center gap-2 pt-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 text-[11px] font-mono text-[#334155] dark:text-slate-300">
@@ -75,8 +74,8 @@ export function Footer() {
 
             <div className="pt-3">
               <div className="p-3.5 rounded-xl bg-[#F8FAFC] dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 text-xs text-[#64748B] dark:text-slate-400 leading-relaxed">
-                Direct inquiries and client partnerships are reviewed directly at{" "}
-                <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span>.
+                Send us a note anytime at{" "}
+                <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span>. We usually reply within one business day.
               </div>
             </div>
           </div>

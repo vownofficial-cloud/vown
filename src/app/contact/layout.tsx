@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Start a Conversation",
+  title: "Contact — What's Slowing You Down? Let's Fix It",
   description:
-    "Get in touch with VOwn to discuss AI automation workflows, business integrations, website development, or venture collaborations.",
+    "Tell us about a workflow bottleneck, tools you want to connect, or a website project. We read every inquiry directly and reply with practical advice.",
 };
 
 export default function ContactLayout({
