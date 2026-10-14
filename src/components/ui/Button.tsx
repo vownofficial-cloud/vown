@@ -25,19 +25,19 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium transition-all duration-200 select-none rounded-xl focus:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+    "inline-flex items-center justify-center font-medium transition-all duration-200 select-none rounded-xl focus:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98] cursor-pointer";
 
   const variants = {
     primary:
-      "bg-[#0F172A] text-white hover:bg-[#1E293B] shadow-2xs hover:shadow-md hover:shadow-slate-900/10 focus-visible:ring-[#0F172A]",
+      "bg-[#0F172A] text-white hover:bg-[#1E293B] dark:bg-white dark:text-[#0F172A] dark:hover:bg-slate-100 shadow-2xs hover:shadow-md hover:shadow-slate-900/10 dark:hover:shadow-black/30 focus-visible:ring-[#0F172A] dark:focus-visible:ring-white",
     secondary:
-      "bg-white text-[#0F172A] border border-[#E2E8F0] hover:bg-[#F8FAFC] hover:border-[#CBD5E1] shadow-2xs hover:shadow-sm focus-visible:ring-[#334155]",
+      "bg-white dark:bg-[#111827] text-[#0F172A] dark:text-slate-100 border border-[#E2E8F0] dark:border-slate-700 hover:bg-[#F8FAFC] dark:hover:bg-slate-800 hover:border-[#CBD5E1] dark:hover:border-slate-600 shadow-2xs hover:shadow-sm focus-visible:ring-[#334155] dark:focus-visible:ring-slate-400",
     subtle:
-      "bg-[#F1F5F9] text-[#334155] hover:bg-[#E2E8F0] hover:text-[#0F172A] focus-visible:ring-[#334155]",
+      "bg-[#F1F5F9] dark:bg-slate-800 text-[#334155] dark:text-slate-200 hover:bg-[#E2E8F0] dark:hover:bg-slate-700 hover:text-[#0F172A] dark:hover:text-white focus-visible:ring-[#334155] dark:focus-visible:ring-slate-400",
     outline:
-      "border border-[#E2E8F0] text-[#334155] hover:border-[#334155] hover:text-[#0F172A] bg-transparent focus-visible:ring-[#334155]",
+      "border border-[#E2E8F0] dark:border-slate-700 text-[#334155] dark:text-slate-300 hover:border-[#334155] dark:hover:border-slate-400 hover:text-[#0F172A] dark:hover:text-white bg-transparent focus-visible:ring-[#334155] dark:focus-visible:ring-slate-400",
     white:
-      "bg-white text-[#0F172A] hover:bg-slate-50 shadow-sm border border-slate-200/80 focus-visible:ring-white",
+      "bg-white text-[#0F172A] hover:bg-slate-50 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 shadow-sm border border-slate-200/80 dark:border-slate-700 focus-visible:ring-white",
   };
 
   const sizes = {
@@ -50,7 +50,11 @@ export function Button({
     <>
       {icon && iconPosition === "left" && <span className="shrink-0">{icon}</span>}
       <span>{children}</span>
-      {icon && iconPosition === "right" && <span className="shrink-0 transition-transform duration-200 group-hover:translate-x-0.5">{icon}</span>}
+      {icon && iconPosition === "right" && (
+        <span className="shrink-0 transition-transform duration-200 group-hover:translate-x-0.5">
+          {icon}
+        </span>
+      )}
     </>
   );
 

@@ -11,10 +11,6 @@ export interface SiteConfig {
   description: string;
   contactEmail: string;
   navItems: NavItem[];
-  socials: {
-    instagramChennai: string;
-    instagramChennaiHandle: string;
-  };
   brandStatement: string;
 }
 
@@ -27,17 +23,12 @@ export const siteConfig: SiteConfig = {
     "VOwn builds intelligent digital experiences through AI automation, seamless integrations, and modern web technology.",
   contactEmail: "admin@vown.site",
   brandStatement:
-    "VOwn is building a connected digital ecosystem through technology, automation, and creative ideas. We focus on useful solutions that help businesses and digital ventures grow.",
+    "VOwn builds intelligent digital experiences through AI automation, seamless integrations, and modern web technology. We focus on useful solutions that help businesses move forward.",
   navItems: [
     { label: "Home", href: "/" },
     { label: "What We Do", href: "/services" },
     { label: "Approach", href: "/approach" },
-    { label: "Ventures", href: "/ventures" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
-  socials: {
-    instagramChennai: "https://www.instagram.com/chennai_vown.site/",
-    instagramChennaiHandle: "@chennai_vown.site",
-  },
 };

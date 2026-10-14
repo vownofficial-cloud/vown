@@ -4,6 +4,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { siteConfig } from "@/data/siteConfig";
 import { Button } from "@/components/ui/Button";
+import { MotionWrap } from "@/components/motion/MotionWrap";
 import {
   Mail,
   Copy,
@@ -29,8 +30,6 @@ function ContactFormContent() {
         return "Business Integrations (Connecting Software)";
       case "website-development":
         return "Website Development";
-      case "venture":
-        return "Ventures & Chennai VOwn";
       default:
         return "AI Automation (Workflows & Tasks)";
     }
@@ -135,45 +134,45 @@ function ContactFormContent() {
   };
 
   return (
-    <div className="py-20 sm:py-28 bg-[#F8FAFC]">
+    <div className="py-20 sm:py-28 bg-[#F8FAFC] dark:bg-[#090D16] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="max-w-3xl mb-14 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E2E8F0] shadow-2xs mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#334155]" />
-            <span className="text-xs font-semibold tracking-tight text-[#334155]">
+        <MotionWrap delay={0.1} direction="up" className="max-w-3xl mb-14 sm:mb-20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#334155] dark:bg-slate-300" />
+            <span className="text-xs font-semibold tracking-tight text-[#334155] dark:text-slate-200">
               Get in Touch
             </span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] leading-tight mb-6">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
             Let&apos;s build something useful.
           </h1>
-          <p className="text-lg sm:text-xl text-[#64748B] leading-relaxed">
+          <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
             Tell us about your project, your current workflow bottlenecks, or your questions.
             We read and respond to every inquiry directly.
           </p>
-        </div>
+        </MotionWrap>
 
         {/* Contact Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Direct Inquiries */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-3xl bg-white border border-[#E2E8F0] shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-center mb-6">
-                <Mail className="w-6 h-6 text-[#0F172A]" />
+          <MotionWrap delay={0.15} direction="up" className="lg:col-span-5 space-y-6">
+            <div className="p-8 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm">
+              <div className="w-12 h-12 rounded-2xl bg-[#F8FAFC] dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 flex items-center justify-center mb-6">
+                <Mail className="w-6 h-6 text-[#0F172A] dark:text-white" />
               </div>
 
-              <div className="text-xs uppercase font-mono tracking-wider text-[#64748B] mb-1">
+              <div className="text-xs uppercase font-mono tracking-wider text-[#64748B] dark:text-slate-400 mb-1">
                 Official Email
               </div>
-              <div className="text-xl font-bold text-[#0F172A] font-mono break-all mb-4">
+              <div className="text-xl font-bold text-[#0F172A] dark:text-white font-mono break-all mb-4">
                 {siteConfig.contactEmail}
               </div>
 
-              <p className="text-sm text-[#475569] leading-relaxed mb-6">
-                Whether you need automated workflows, software integrations, a new website, or want to explore a venture partnership, write to us directly.
+              <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed mb-6">
+                Whether you need automated workflows, software integrations, a new website, or want to explore working together, write to us directly.
               </p>
 
               {/* Action Buttons */}
@@ -184,9 +183,9 @@ function ContactFormContent() {
                   size="sm"
                   icon={
                     copiedEmail ? (
-                      <Check className="w-4 h-4 text-emerald-600" />
+                      <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                     ) : (
-                      <Copy className="w-4 h-4 text-[#64748B]" />
+                      <Copy className="w-4 h-4 text-[#64748B] dark:text-slate-400" />
                     )
                   }
                   iconPosition="left"
@@ -207,51 +206,51 @@ function ContactFormContent() {
             </div>
 
             {/* Direct Communication Promise */}
-            <div className="p-6 rounded-2xl bg-white/70 border border-[#E2E8F0] flex items-start gap-3">
-              <Clock className="w-5 h-5 text-[#334155] shrink-0 mt-0.5" />
-              <div className="text-xs text-[#475569] leading-relaxed">
-                <span className="font-semibold text-[#0F172A]">Direct communication.</span> All emails sent to <span className="font-mono text-[#0F172A]">admin@vown.site</span> go straight to our core team. We review every message and typically reply within one business day.
+            <div className="p-6 rounded-2xl bg-white/70 dark:bg-[#111827]/70 border border-[#E2E8F0] dark:border-slate-800 flex items-start gap-3">
+              <Clock className="w-5 h-5 text-[#334155] dark:text-slate-300 shrink-0 mt-0.5" />
+              <div className="text-xs text-[#475569] dark:text-slate-300 leading-relaxed">
+                <span className="font-semibold text-[#0F172A] dark:text-white">Direct communication.</span> All emails sent to <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span> go straight to our core team. We review every message and typically reply within one business day.
               </div>
             </div>
-          </div>
+          </MotionWrap>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E2E8F0] shadow-sm">
+          <MotionWrap delay={0.2} direction="up" className="lg:col-span-7">
+            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm">
               
-              <h2 className="text-2xl font-bold text-[#0F172A] tracking-tight mb-2">
+              <h2 className="text-2xl font-bold text-[#0F172A] dark:text-white tracking-tight mb-2">
                 Send a Message
               </h2>
-              <p className="text-xs sm:text-sm text-[#64748B] mb-8">
+              <p className="text-xs sm:text-sm text-[#64748B] dark:text-slate-400 mb-8">
                 Fill in the details below and we will get back to you promptly.
               </p>
 
               {/* Status Notifications */}
               {status === "delivered" && (
-                <div className="mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm">
+                <div className="mb-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200 text-sm">
                   <div className="flex items-center gap-2 font-semibold mb-1">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                     <span>Message Sent Successfully</span>
                   </div>
-                  <p className="text-xs text-emerald-800 leading-relaxed">
+                  <p className="text-xs text-emerald-800 dark:text-emerald-300 leading-relaxed">
                     {feedbackMessage}
                   </p>
                 </div>
               )}
 
               {status === "dev_mode" && (
-                <div className="mb-6 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-sm">
+                <div className="mb-6 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-sm">
                   <div className="flex items-center gap-2 font-semibold mb-1">
-                    <Info className="w-5 h-5 text-amber-600 shrink-0" />
+                    <Info className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
                     <span>Inquiry Ready to Send</span>
                   </div>
-                  <p className="text-xs text-amber-800 leading-relaxed mb-3">
+                  <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed mb-3">
                     {feedbackMessage}
                   </p>
                   {mailtoFallback && (
                     <a
                       href={mailtoFallback}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0F172A] text-white font-medium text-xs hover:bg-[#1E293B] transition-colors"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0F172A] dark:bg-white text-white dark:text-[#0F172A] font-medium text-xs hover:bg-[#1E293B] dark:hover:bg-slate-100 transition-colors"
                     >
                       <Send className="w-3.5 h-3.5" />
                       <span>Click to Send via Your Email App</span>
@@ -261,11 +260,11 @@ function ContactFormContent() {
               )}
 
               {status === "error" && (
-                <div className="mb-6 p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-900 text-sm flex items-start gap-3">
-                  <AlertCircle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
+                <div className="mb-6 p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-900 dark:text-rose-200 text-sm flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-xs sm:text-sm">Unable to submit form</div>
-                    <div className="text-xs text-rose-700 mt-0.5">{feedbackMessage}</div>
+                    <div className="text-xs text-rose-700 dark:text-rose-300 mt-0.5">{feedbackMessage}</div>
                     <div className="mt-2 text-xs">
                       Please email us directly at{" "}
                       <a href={`mailto:${siteConfig.contactEmail}`} className="underline font-mono">
@@ -279,7 +278,7 @@ function ContactFormContent() {
               <form onSubmit={handleSubmit} noValidate className="space-y-5">
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-xs font-semibold text-[#0F172A] mb-1.5">
+                  <label htmlFor="name" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
                     Your Name <span className="text-rose-500">*</span>
                   </label>
                   <input
@@ -292,7 +291,7 @@ function ContactFormContent() {
                       if (formErrors.name) setFormErrors({ ...formErrors, name: "" });
                     }}
                     placeholder="e.g. Maya Robinson"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-[#E2E8F0] text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#0B0F17] focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-slate-400 focus:border-transparent transition-all"
                   />
                   {formErrors.name && (
                     <p className="mt-1 text-xs text-rose-500">{formErrors.name}</p>
@@ -301,7 +300,7 @@ function ContactFormContent() {
 
                 {/* Email Field */}
                 <div>
-                  <label htmlFor="email" className="block text-xs font-semibold text-[#0F172A] mb-1.5">
+                  <label htmlFor="email" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
                     Your Email <span className="text-rose-500">*</span>
                   </label>
                   <input
@@ -314,7 +313,7 @@ function ContactFormContent() {
                       if (formErrors.email) setFormErrors({ ...formErrors, email: "" });
                     }}
                     placeholder="e.g. maya@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-[#E2E8F0] text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#0B0F17] focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-slate-400 focus:border-transparent transition-all"
                   />
                   {formErrors.email && (
                     <p className="mt-1 text-xs text-rose-500">{formErrors.email}</p>
@@ -323,26 +322,25 @@ function ContactFormContent() {
 
                 {/* Area of Interest */}
                 <div>
-                  <label htmlFor="service" className="block text-xs font-semibold text-[#0F172A] mb-1.5">
+                  <label htmlFor="service" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
                     Area of Interest
                   </label>
                   <select
                     id="service"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-[#E2E8F0] text-sm text-[#0F172A] focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 text-sm text-[#0F172A] dark:text-white focus:bg-white dark:focus:bg-[#0B0F17] focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-slate-400 focus:border-transparent transition-all"
                   >
                     <option value="AI Automation (Workflows & Tasks)">AI Automation (Workflows &amp; Tasks)</option>
                     <option value="Business Integrations (Connecting Software)">Business Integrations (Connecting Software)</option>
                     <option value="Website Development">Website Development</option>
-                    <option value="Ventures & Chennai VOwn">Ventures &amp; Chennai VOwn</option>
                     <option value="General Question">General Question</option>
                   </select>
                 </div>
 
                 {/* Project Details */}
                 <div>
-                  <label htmlFor="message" className="block text-xs font-semibold text-[#0F172A] mb-1.5">
+                  <label htmlFor="message" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
                     Project Details <span className="text-rose-500">*</span>
                   </label>
                   <textarea
@@ -355,7 +353,7 @@ function ContactFormContent() {
                       if (formErrors.message) setFormErrors({ ...formErrors, message: "" });
                     }}
                     placeholder="Tell us what you're working on, current tools, goals, or timeline..."
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-[#E2E8F0] text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] focus:border-transparent transition-all resize-y"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#0B0F17] focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-slate-400 focus:border-transparent transition-all resize-y"
                   />
                   {formErrors.message && (
                     <p className="mt-1 text-xs text-rose-500">{formErrors.message}</p>
@@ -377,21 +375,21 @@ function ContactFormContent() {
 
                   <a
                     href={buildMailtoUrl()}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-[#E2E8F0] bg-white text-sm font-medium text-[#334155] hover:bg-slate-50 hover:border-slate-300 transition-colors"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-[#E2E8F0] dark:border-slate-700 bg-white dark:bg-[#0B0F17] text-sm font-medium text-[#334155] dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-300 transition-colors"
                   >
                     <span>Send via Email App</span>
-                    <ArrowUpRight className="w-4 h-4 text-[#64748B]" />
+                    <ArrowUpRight className="w-4 h-4 text-[#64748B] dark:text-slate-400" />
                   </a>
                 </div>
 
-                <div className="text-[11px] text-[#94A3B8] text-center pt-2">
+                <div className="text-[11px] text-[#94A3B8] dark:text-slate-500 text-center pt-2">
                   Inquiries are delivered directly to{" "}
-                  <span className="font-mono text-[#64748B]">admin@vown.site</span>.
+                  <span className="font-mono text-[#64748B] dark:text-slate-400">admin@vown.site</span>.
                 </div>
               </form>
 
             </div>
-          </div>
+          </MotionWrap>
 
         </div>
 
@@ -404,7 +402,7 @@ export default function ContactPage() {
   return (
     <Suspense
       fallback={
-        <div className="py-28 text-center text-sm font-mono text-[#64748B]">
+        <div className="py-28 text-center text-sm font-mono text-[#64748B] dark:text-slate-400">
           Loading contact page...
         </div>
       }

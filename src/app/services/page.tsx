@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { BrainCircuit, Workflow, Layout, ArrowUpRight, CheckCircle2, ArrowRight } from "lucide-react";
+import { MotionWrap } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
   title: "What We Do — AI Automation, Integrations & Web Development",
@@ -102,134 +103,140 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="py-20 sm:py-28 bg-[#F8FAFC]">
+    <div className="py-20 sm:py-28 bg-[#F8FAFC] dark:bg-[#090D16] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="max-w-3xl mb-16 sm:mb-24">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E2E8F0] shadow-2xs mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#334155]" />
-            <span className="text-xs font-semibold tracking-tight text-[#334155]">
+        <MotionWrap delay={0.1} direction="up" className="max-w-3xl mb-16 sm:mb-24">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#334155] dark:bg-slate-300" />
+            <span className="text-xs font-semibold tracking-tight text-[#334155] dark:text-slate-200">
               Core Capabilities
             </span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] leading-tight mb-6">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
             What We Do.
           </h1>
-          <p className="text-lg sm:text-xl text-[#64748B] leading-relaxed">
+          <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
             We build smart automation, connect your business software, and develop clean modern
             websites tailored to your goals. Honest engineering, transparent communication, and zero unnecessary complexity.
           </p>
-        </div>
+        </MotionWrap>
 
         {/* Detailed Service Areas */}
         <div className="space-y-12 sm:space-y-16">
           {services.map((service) => {
             const Icon = service.icon;
             return (
-              <section
+              <MotionWrap
                 key={service.id}
-                id={service.id}
-                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow duration-200"
+                delay={0.1}
+                direction="up"
+                className="w-full"
               >
-                {/* Service Header Row */}
-                <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-8 border-b border-[#F1F5F9]">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-center shrink-0">
-                      <Icon className="w-6 h-6 text-[#0F172A]" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="font-mono text-xs font-semibold text-[#94A3B8]">
-                          {service.number}
-                        </span>
-                        <span className="text-xs text-[#CBD5E1]">/</span>
-                        <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider font-mono">
-                          {service.title}
-                        </span>
+                <section
+                  id={service.id}
+                  className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm hover:shadow-md dark:hover:border-slate-700 transition-all duration-200"
+                >
+                  {/* Service Header Row */}
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-8 border-b border-[#F1F5F9] dark:border-slate-800/80">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-2xl bg-[#F8FAFC] dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 flex items-center justify-center shrink-0">
+                        <Icon className="w-6 h-6 text-[#0F172A] dark:text-white" />
                       </div>
-                      <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">
-                        {service.headline}
-                      </h2>
-                    </div>
-                  </div>
-
-                  <Button
-                    href={`/contact?service=${service.contactParam}`}
-                    variant="primary"
-                    size="sm"
-                    className="shrink-0 self-start md:self-auto"
-                    icon={<ArrowUpRight className="w-3.5 h-3.5" />}
-                  >
-                    Discuss This Service
-                  </Button>
-                </div>
-
-                {/* Description */}
-                <div className="py-8 border-b border-[#F1F5F9]">
-                  <p className="text-base sm:text-lg text-[#334155] leading-relaxed max-w-4xl">
-                    {service.description}
-                  </p>
-                </div>
-
-                {/* Capabilities Grid */}
-                <div className="pt-8">
-                  <div className="text-xs font-mono uppercase tracking-wider text-[#94A3B8] mb-6">
-                    What We Build &amp; Support
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {service.capabilities.map((cap) => (
-                      <div
-                        key={cap.title}
-                        className="p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex flex-col justify-between"
-                      >
-                        <div>
-                          <div className="flex items-center gap-2 text-sm font-bold text-[#0F172A] mb-1.5">
-                            <CheckCircle2 className="w-4 h-4 text-[#334155] shrink-0" />
-                            <span>{cap.title}</span>
-                          </div>
-                          <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
-                            {cap.detail}
-                          </p>
+                      <div>
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-mono text-xs font-semibold text-[#94A3B8] dark:text-slate-500">
+                            {service.number}
+                          </span>
+                          <span className="text-xs text-[#CBD5E1] dark:text-slate-700">/</span>
+                          <span className="text-xs font-semibold text-[#64748B] dark:text-slate-400 uppercase tracking-wider font-mono">
+                            {service.title}
+                          </span>
                         </div>
+                        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
+                          {service.headline}
+                        </h2>
                       </div>
-                    ))}
+                    </div>
+
+                    <Button
+                      href={`/contact?service=${service.contactParam}`}
+                      variant="primary"
+                      size="sm"
+                      className="shrink-0 self-start md:self-auto"
+                      icon={<ArrowUpRight className="w-3.5 h-3.5" />}
+                    >
+                      Discuss This Service
+                    </Button>
                   </div>
 
-                  {/* Deliverables Summary */}
-                  <div className="mt-8 p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-                    <div>
-                      <span className="font-semibold text-[#0F172A]">Core Outcomes: </span>
-                      <span className="text-[#475569]">{service.deliverables}</span>
-                    </div>
-                    <Link
-                      href={`/contact?service=${service.contactParam}`}
-                      className="font-semibold text-[#0F172A] hover:underline inline-flex items-center gap-1 shrink-0"
-                    >
-                      <span>Inquire now</span>
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
+                  {/* Description */}
+                  <div className="py-8 border-b border-[#F1F5F9] dark:border-slate-800/80">
+                    <p className="text-base sm:text-lg text-[#334155] dark:text-slate-300 leading-relaxed max-w-4xl">
+                      {service.description}
+                    </p>
                   </div>
-                </div>
-              </section>
+
+                  {/* Capabilities Grid */}
+                  <div className="pt-8">
+                    <div className="text-xs font-mono uppercase tracking-wider text-[#94A3B8] dark:text-slate-500 mb-6">
+                      What We Build &amp; Support
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {service.capabilities.map((cap) => (
+                        <div
+                          key={cap.title}
+                          className="p-5 rounded-2xl bg-[#F8FAFC] dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 flex flex-col justify-between"
+                        >
+                          <div>
+                            <div className="flex items-center gap-2 text-sm font-bold text-[#0F172A] dark:text-white mb-1.5">
+                              <CheckCircle2 className="w-4 h-4 text-[#334155] dark:text-slate-300 shrink-0" />
+                              <span>{cap.title}</span>
+                            </div>
+                            <p className="text-xs sm:text-sm text-[#64748B] dark:text-slate-400 leading-relaxed">
+                              {cap.detail}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Deliverables Summary */}
+                    <div className="mt-8 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+                      <div>
+                        <span className="font-semibold text-[#0F172A] dark:text-white">Core Outcomes: </span>
+                        <span className="text-[#475569] dark:text-slate-300">{service.deliverables}</span>
+                      </div>
+                      <Link
+                        href={`/contact?service=${service.contactParam}`}
+                        className="font-semibold text-[#0F172A] dark:text-white hover:underline inline-flex items-center gap-1 shrink-0"
+                      >
+                        <span>Inquire now</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+                  </div>
+                </section>
+              </MotionWrap>
             );
           })}
         </div>
 
         {/* Bottom Consultation Banner */}
-        <div className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-3xl bg-[#0F172A] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <MotionWrap delay={0.15} direction="up" className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-transparent dark:border-slate-800 shadow-xl">
           <div className="max-w-xl">
-            <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
+            <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-white">
               Need a tailored system combination?
             </h3>
-            <p className="text-sm text-slate-300 leading-relaxed">
+            <p className="text-sm text-slate-300 dark:text-slate-300 leading-relaxed">
               Many projects require both custom integrations and modern web development. Tell us what you need and we will propose a practical plan.
             </p>
           </div>
           <Button href="/contact" variant="white" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
             Start a Conversation
           </Button>
-        </div>
+        </MotionWrap>
 
       </div>
     </div>

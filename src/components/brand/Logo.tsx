@@ -18,10 +18,6 @@ export function Logo({
   href = "/",
   showDomainBadge = false,
 }: LogoProps) {
-  // Dimension mappings keeping exact native proportions
-  // Wordmark native: 1159 x 387 (~ 2.99:1)
-  // Primary logo: 1254 x 1254 (1:1)
-  
   const sizes = {
     sm: {
       wordmark: { width: 90, height: 30 },
@@ -48,19 +44,19 @@ export function Logo({
             alt="VOwn Logo"
             width={currentSize.primary.width}
             height={currentSize.primary.height}
-            className="w-auto h-auto object-contain transition-transform duration-200 group-hover:scale-105"
+            className="w-auto h-auto object-contain transition-transform duration-200 group-hover:scale-105 dark:brightness-0 dark:invert"
             priority
           />
         </div>
       ) : variant === "lockup" ? (
         <div className="flex items-center gap-2.5">
-          <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-white border border-[#E2E8F0] shadow-2xs p-1">
+          <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-white dark:bg-slate-800 border border-[#E2E8F0] dark:border-slate-700 shadow-2xs p-1">
             <Image
               src="/brand/vown-primary-logo.png"
               alt="VOwn Mark"
               width={24}
               height={24}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain dark:brightness-0 dark:invert"
               priority
             />
           </div>
@@ -69,7 +65,7 @@ export function Logo({
             alt="VOwn"
             width={currentSize.wordmark.width * 0.85}
             height={currentSize.wordmark.height * 0.85}
-            className="w-auto h-auto object-contain"
+            className="w-auto h-auto object-contain dark:brightness-0 dark:invert"
             priority
           />
         </div>
@@ -80,14 +76,14 @@ export function Logo({
             alt="VOwn"
             width={currentSize.wordmark.width}
             height={currentSize.wordmark.height}
-            className="w-auto h-auto object-contain transition-opacity duration-200 group-hover:opacity-85"
+            className="w-auto h-auto object-contain transition-opacity duration-200 group-hover:opacity-85 dark:brightness-0 dark:invert"
             priority
           />
         </div>
       )}
 
       {showDomainBadge && (
-        <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono font-medium tracking-tight bg-[#E2E8F0]/70 text-[#475569] border border-[#CBD5E1]/60">
+        <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono font-medium tracking-tight bg-[#E2E8F0]/70 text-[#475569] border border-[#CBD5E1]/60 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700">
           .site
         </span>
       )}
@@ -98,7 +94,7 @@ export function Logo({
     return (
       <Link
         href={href}
-        className="focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#334155] rounded-md transition-opacity"
+        className="focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#334155] dark:focus-visible:ring-slate-400 rounded-md transition-opacity"
         aria-label="VOwn Homepage"
       >
         {content}

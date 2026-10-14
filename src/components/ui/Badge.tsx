@@ -24,10 +24,14 @@ export function Badge({
   };
 
   const variants = {
-    default: "bg-white/80 text-[#334155] border border-[#E2E8F0] shadow-2xs backdrop-blur-xs",
-    outline: "bg-transparent text-[#64748B] border border-[#E2E8F0]",
-    secondary: "bg-[#F1F5F9] text-[#334155] border border-transparent",
-    status: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
+    default:
+      "bg-white/90 dark:bg-slate-800 text-[#334155] dark:text-slate-200 border border-[#E2E8F0] dark:border-slate-700 shadow-2xs backdrop-blur-xs",
+    outline:
+      "bg-transparent text-[#64748B] dark:text-slate-400 border border-[#E2E8F0] dark:border-slate-700",
+    secondary:
+      "bg-[#F1F5F9] dark:bg-slate-800 text-[#334155] dark:text-slate-200 border border-transparent",
+    status:
+      "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/60",
   };
 
   return (

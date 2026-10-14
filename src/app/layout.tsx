@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/data/siteConfig";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,10 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#F8FAFC",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F8FAFC" },
+    { media: "(prefers-color-scheme: dark)", color: "#090D16" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
@@ -38,10 +42,8 @@ export const metadata: Metadata = {
     "VOwn",
     "vown.site",
     "Autonomous Workflows",
-    "API Orchestration",
+    "API Integrations",
     "Next.js Development",
-    "Chennai VOwn",
-    "Digital Studio",
   ],
   authors: [{ name: "VOwn Team", url: "https://vown.site" }],
   creator: "VOwn",
@@ -107,7 +109,6 @@ export default function RootLayout({
         },
         email: siteConfig.contactEmail,
         description: siteConfig.description,
-        sameAs: [siteConfig.socials.instagramChennai],
       },
       {
         "@type": "WebSite",
@@ -125,18 +126,41 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <head>
+        {/* Anti-FOUC script for instant theme application */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('vown-theme');
+                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (saved === 'dark' || (!saved && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#0F172A] font-sans selection:bg-[#334155] selection:text-white">
-        <Navbar />
-        <main className="flex-1 flex flex-col">{children}</main>
-        <Footer />
+      <body className="min-h-full flex flex-col bg-[#F8FAFC] dark:bg-[#090D16] text-[#0F172A] dark:text-[#F8FAFC] font-sans selection:bg-[#334155] dark:selection:bg-slate-700 selection:text-white transition-colors duration-200">
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1 flex flex-col">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
