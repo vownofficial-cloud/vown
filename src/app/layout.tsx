@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "VOwn builds practical automations, connected workflows, and clear websites for teams that want less busywork.",
+    "Own your time back with VOwn. Smart automation, connected business tools, and websites built to make work easier.",
   keywords: [
     "AI Automation for Business",
     "Business Process Automation",
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
     canonical: "https://vown.site",
   },
   openGraph: {
-    title: "VOwn · Better systems for better work",
+    title: "VOwn · Your workday, upgraded",
     description:
-      "Automations, connected tools, and clear websites that help your team spend less time on busywork.",
+      "Less hassle. More momentum. VOwn brings automation, integrations, and websites together.",
     url: "https://vown.site",
     siteName: "VOwn",
     images: [
@@ -83,9 +83,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VOwn · Better systems for better work",
+    title: "VOwn · Your workday, upgraded",
     description:
-      "Automations, connected tools, and clear websites that help your team spend less time on busywork.",
+      "Less hassle. More momentum. VOwn brings automation, integrations, and websites together.",
     images: ["/brand/vown-primary-logo.png"],
   },
   icons: {
@@ -128,7 +128,7 @@ export default function RootLayout({
         image: "https://vown.site/brand/vown-primary-logo.png",
         email: siteConfig.contactEmail,
         description:
-          "VOwn helps businesses reduce repetitive work, connect everyday software, and build clear, responsive websites.",
+          "VOwn builds smart automations, connects business apps, and creates responsive websites that make life easier.",
         knowsAbout: [
           "AI Automation",
           "Business Process Automation",
