@@ -51,10 +51,9 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 transition-all duration-200",
-          isScrolled
-            ? "glass-nav py-3.5 shadow-xs"
-            : "bg-[#F8FAFC]/90 dark:bg-[#090D16]/90 backdrop-blur-xs py-4 sm:py-5 border-b border-[#E2E8F0]/50 dark:border-slate-800/60"
+          "fixed top-0 left-0 right-0 z-40 transition-all duration-200 border-b backdrop-blur-md",
+          "bg-[#F8FAFC]/95 dark:bg-[#090D16]/95 border-[#E2E8F0]/80 dark:border-slate-800/80",
+          isScrolled ? "py-3 shadow-xs" : "py-4 sm:py-5"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

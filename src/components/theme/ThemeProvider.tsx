@@ -17,13 +17,17 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Check localStorage first
+    // Read current state from DOM (set by anti-FOUC script) or localStorage
     const savedTheme = localStorage.getItem("vown-theme") as Theme | null;
+    const isDarkInDom = document.documentElement.classList.contains("dark");
+
     if (savedTheme === "light" || savedTheme === "dark") {
       setThemeState(savedTheme);
       applyTheme(savedTheme);
+    } else if (isDarkInDom) {
+      setThemeState("dark");
+      applyTheme("dark");
     } else {
-      // Fallback to system preference
       const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const initial = systemPrefersDark ? "dark" : "light";
       setThemeState(initial);
@@ -58,12 +62,15 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
-    localStorage.setItem("vown-theme", newTheme);
+    try {
+      localStorage.setItem("vown-theme", newTheme);
+    } catch {}
     applyTheme(newTheme);
   };
 
   const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : "light";
+    const isDarkNow = document.documentElement.classList.contains("dark");
+    const nextTheme: Theme = isDarkNow ? "light" : "dark";
     setTheme(nextTheme);
   };
 
