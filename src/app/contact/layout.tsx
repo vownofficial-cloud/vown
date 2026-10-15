@@ -4,14 +4,14 @@ import React from "react";
 export const metadata: Metadata = {
   title: "VOwn",
   description:
-    "Get in touch with the VOwn team. We respond directly within 24 hours to discuss your business automation, software integrations, or custom website requirements.",
+    "Contact VOwn about automation, connected software, or a new website. Tell us what you want to improve.",
   alternates: {
     canonical: "https://vown.site/contact",
   },
   openGraph: {
-    title: "Contact VOwn — Discuss Your Automation, Integration, or Website Project",
+    title: "Contact VOwn | Tell Us About Your Project",
     description:
-      "Get in touch with the VOwn team to discuss your business automation, software integrations, or custom website requirements.",
+      "Have a workflow, integration, or website idea? Tell VOwn what you need and start a conversation.",
     url: "https://vown.site/contact",
     siteName: "VOwn",
     images: [
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact VOwn — Discuss Your Automation, Integration, or Website Project",
+    title: "Contact VOwn | Tell Us About Your Project",
     description:
-      "Get in touch with the VOwn team to discuss your business automation, software integrations, or custom website requirements.",
+      "Have a workflow, integration, or website idea? Tell VOwn what you need and start a conversation.",
     images: ["/brand/vown-primary-logo.png"],
   },
 };
