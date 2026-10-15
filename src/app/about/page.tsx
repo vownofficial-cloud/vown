@@ -5,9 +5,29 @@ import { ArrowUpRight, ShieldCheck, Cpu, Sparkles, HeartHandshake } from "lucide
 import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "About VOwn — Technology Should Solve Problems, Not Create More",
+  title: "About VOwn — Practical AI Automation & Digital Systems for Growing Businesses",
   description:
-    "Learn about VOwn: our mission, practical mindset, and focus on building useful digital solutions for growing businesses.",
+    "Learn about VOwn: our mission, values, and focus on building dependable AI workflow automations, software integrations, and modern websites for business growth.",
+  alternates: {
+    canonical: "https://vown.site/about",
+  },
+  openGraph: {
+    title: "About VOwn — Practical AI Automation & Digital Systems for Growing Businesses",
+    description:
+      "Learn about VOwn: our mission, values, and focus on building dependable AI workflow automations, software integrations, and modern websites for business growth.",
+    url: "https://vown.site/about",
+    siteName: "VOwn",
+    images: [
+      {
+        url: "/brand/vown-primary-logo.png",
+        width: 1254,
+        height: 1254,
+        alt: "About VOwn — Technology Studio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
@@ -66,8 +86,46 @@ export default function AboutPage() {
     "High-Speed Cloud Hosting",
   ];
 
+  const aboutJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://vown.site",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "About",
+            item: "https://vown.site/about",
+          },
+        ],
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://vown.site/about#webpage",
+        url: "https://vown.site/about",
+        name: "About VOwn",
+        description:
+          "VOwn is a technology studio focused on practical digital solutions that help growing businesses run smoother and save time.",
+        mainEntity: {
+          "@id": "https://vown.site/#organization",
+        },
+      },
+    ],
+  };
+
   return (
     <div className="py-20 sm:py-28 bg-[#F8FAFC] dark:bg-[#090D16] transition-colors duration-200">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}

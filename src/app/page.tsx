@@ -1,11 +1,78 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { ArrowUpRight, ArrowRight, BrainCircuit, Workflow, Layout, Compass, PencilRuler, Code2, RefreshCw, Mail } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/MotionWrap";
 
+export const metadata: Metadata = {
+  title: "VOwn · AI Automation, Business Software Integrations & Web Development",
+  description:
+    "We automate repetitive work, connect your tools, and build websites that help your business grow. Free up your team's time with practical AI and modern digital solutions.",
+  alternates: {
+    canonical: "https://vown.site",
+  },
+  openGraph: {
+    title: "VOwn · AI Automation, Business Software Integrations & Web Development",
+    description:
+      "We automate repetitive work, connect your tools, and build websites that help your business grow. Practical AI and software integrations for modern teams.",
+    url: "https://vown.site",
+    siteName: "VOwn",
+    images: [
+      {
+        url: "/brand/vown-primary-logo.png",
+        width: 1254,
+        height: 1254,
+        alt: "VOwn - Technology That Moves You Forward",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 export default function HomePage() {
+  const homeJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Core Services by VOwn",
+    itemListElement: [
+      {
+        "@type": "Service",
+        position: 1,
+        name: "AI Automation",
+        description: "Replace repetitive copying, sorting, and manual paperwork with smart workflows that run in the background.",
+        url: "https://vown.site/services#ai-automation",
+        provider: {
+          "@type": "Organization",
+          name: "VOwn",
+        },
+      },
+      {
+        "@type": "Service",
+        position: 2,
+        name: "Business Software Integrations",
+        description: "Link your CRM, payment tools, spreadsheets, and emails so customer information is always in sync.",
+        url: "https://vown.site/services#business-integrations",
+        provider: {
+          "@type": "Organization",
+          name: "VOwn",
+        },
+      },
+      {
+        "@type": "Service",
+        position: 3,
+        name: "Website Development",
+        description: "Fast, clean websites engineered to load instantly, look sharp on mobile, and turn visitors into clients.",
+        url: "https://vown.site/services#website-development",
+        provider: {
+          "@type": "Organization",
+          name: "VOwn",
+        },
+      },
+    ],
+  };
   const coreHooks = [
     {
       action: "Automate",
@@ -39,6 +106,10 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       {/* 1. Hero Section */}
       <section className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 overflow-hidden bg-[#F8FAFC] dark:bg-[#090D16] bg-grid-subtle border-b border-[#E2E8F0] dark:border-slate-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

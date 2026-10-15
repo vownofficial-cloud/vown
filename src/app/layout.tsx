@@ -34,20 +34,33 @@ export const metadata: Metadata = {
     template: "%s | VOwn",
   },
   description:
-    "We automate repetitive work, connect your tools, and build websites that help your business grow.",
+    "We automate repetitive work, connect your tools, and build websites that help your business grow. Practical AI automation and software integrations for businesses.",
   keywords: [
-    "AI Automation",
-    "Business Integrations",
+    "AI Automation for Business",
+    "Business Process Automation",
+    "Business Software Integrations",
     "Website Development",
+    "Workflow Automation",
+    "CRM Integration",
+    "API Integrations",
+    "Next.js Web Development",
     "VOwn",
     "vown.site",
-    "Workflow Automation",
-    "Software Integrations",
-    "Next.js Development",
   ],
   authors: [{ name: "VOwn Team", url: "https://vown.site" }],
   creator: "VOwn",
   publisher: "VOwn",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
     canonical: "https://vown.site",
   },
@@ -62,7 +75,7 @@ export const metadata: Metadata = {
         url: "/brand/vown-primary-logo.png",
         width: 1254,
         height: 1254,
-        alt: "VOwn Logo",
+        alt: "VOwn - Technology That Moves You Forward",
       },
     ],
     locale: "en_US",
@@ -85,6 +98,9 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
 };
 
 export default function RootLayout({
@@ -92,23 +108,41 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Structured data for Search Engines (JSON-LD)
+  // Enriched structured data for Search & Answer Engines (JSON-LD)
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         "@id": "https://vown.site/#organization",
         name: "VOwn",
+        alternateName: "VOwn Technology Studio",
         url: "https://vown.site",
         logo: {
           "@type": "ImageObject",
           url: "https://vown.site/brand/vown-primary-logo.png",
           width: 1254,
           height: 1254,
+          caption: "VOwn Logo",
         },
+        image: "https://vown.site/brand/vown-primary-logo.png",
         email: siteConfig.contactEmail,
-        description: siteConfig.description,
+        description:
+          "VOwn automates repetitive work, connects business software tools, and builds fast, modern websites that help companies scale efficiently.",
+        knowsAbout: [
+          "AI Automation",
+          "Business Process Automation",
+          "Software Integrations",
+          "API Integration",
+          "Custom Web Development",
+          "Next.js Development",
+          "Operational Efficiency",
+        ],
+        priceRange: "$$",
+        areaServed: {
+          "@type": "AdministrativeArea",
+          name: "Global",
+        },
       },
       {
         "@type": "WebSite",
@@ -119,6 +153,7 @@ export default function RootLayout({
         publisher: {
           "@id": "https://vown.site/#organization",
         },
+        inLanguage: "en-US",
       },
     ],
   };

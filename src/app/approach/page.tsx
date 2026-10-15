@@ -5,9 +5,29 @@ import { CheckCircle2, ArrowUpRight, Compass, PencilRuler, Code2, RefreshCw } fr
 import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "Our Approach — Clear Thinking. Thoughtful Building",
+  title: "Our Approach — Clear, Practical Automation & Web Process | VOwn",
   description:
-    "How VOwn works: Discover, Design, Build, and Improve. A clear, human process focused on practical business results.",
+    "How VOwn works: Discover, Design, Build, and Improve. A transparent, 4-phase methodology for AI automation, integrations, and websites built for real business ROI.",
+  alternates: {
+    canonical: "https://vown.site/approach",
+  },
+  openGraph: {
+    title: "Our Approach — Clear, Practical Automation & Web Process | VOwn",
+    description:
+      "How VOwn works: Discover, Design, Build, and Improve. A transparent, 4-phase methodology for AI automation, integrations, and websites built for real business ROI.",
+    url: "https://vown.site/approach",
+    siteName: "VOwn",
+    images: [
+      {
+        url: "/brand/vown-primary-logo.png",
+        width: 1254,
+        height: 1254,
+        alt: "VOwn Approach — Discover, Design, Build, Improve",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function ApproachPage() {
@@ -88,8 +108,50 @@ export default function ApproachPage() {
     },
   ];
 
+  const approachJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://vown.site",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Approach",
+            item: "https://vown.site/approach",
+          },
+        ],
+      },
+      {
+        "@type": "HowTo",
+        name: "VOwn's 4-Phase Automation and Web Development Process",
+        description:
+          "How VOwn designs, builds, and deploys custom AI automations, integrations, and websites for growing businesses.",
+        step: stages.map((stage, idx) => ({
+          "@type": "HowToStep",
+          position: idx + 1,
+          name: stage.name,
+          itemListElement: {
+            "@type": "HowToDirection",
+            text: `${stage.tagline}. ${stage.description}`,
+          },
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="py-20 sm:py-28 bg-[#F8FAFC] dark:bg-[#090D16] transition-colors duration-200">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(approachJsonLd) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}

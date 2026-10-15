@@ -2,13 +2,33 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { BrainCircuit, Workflow, Layout, ArrowUpRight, CheckCircle2, ArrowRight } from "lucide-react";
+import { BrainCircuit, Workflow, Layout, ArrowUpRight, CheckCircle2, ArrowRight, HelpCircle } from "lucide-react";
 import { MotionWrap } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "What We Do — The Right Tools. Working Smarter Together",
+  title: "AI Automation, Business Integrations & Web Development Services | VOwn",
   description:
-    "We automate repetitive work, connect business tools, and build modern websites that help your business grow.",
+    "Explore VOwn's business technology services: smart AI workflow automation, cross-platform software integrations, and fast modern websites designed to eliminate busywork.",
+  alternates: {
+    canonical: "https://vown.site/services",
+  },
+  openGraph: {
+    title: "AI Automation, Business Integrations & Web Development Services | VOwn",
+    description:
+      "Explore VOwn's business technology services: smart AI workflow automation, cross-platform software integrations, and fast modern websites designed to eliminate busywork.",
+    url: "https://vown.site/services",
+    siteName: "VOwn",
+    images: [
+      {
+        url: "/brand/vown-primary-logo.png",
+        width: 1254,
+        height: 1254,
+        alt: "VOwn Services — AI Automation, Software Integrations & Web Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function ServicesPage() {
@@ -102,8 +122,74 @@ export default function ServicesPage() {
     },
   ];
 
+  const faqs = [
+    {
+      question: "What kinds of business tasks can VOwn automate?",
+      answer:
+        "We automate repetitive, rule-based operations such as document parsing (extracting invoice totals and receipts), customer inquiry routing, syncing client data across CRMs and spreadsheets, automated report generation, and sending instant internal alerts via Slack or Teams.",
+    },
+    {
+      question: "Which software platforms and tools can you connect?",
+      answer:
+        "We build integrations across popular business systems including CRMs (HubSpot, Salesforce, Pipedrive), communication tools (Slack, Microsoft Teams, Gmail, WhatsApp Business), payment and accounting platforms (Stripe, QuickBooks), databases (PostgreSQL, Supabase, Airtable, Notion), and custom internal REST or GraphQL APIs.",
+    },
+    {
+      question: "How does VOwn safeguard our company's data and privacy?",
+      answer:
+        "We follow industry security standards: least-privilege API scoping, encrypted credential storage in isolated environments, and zero sharing of proprietary client data for public AI model training. Your data remains completely within your secure ecosystem.",
+    },
+    {
+      question: "How long does a typical automation or website build take?",
+      answer:
+        "Targeted workflow automations and integrations typically deploy within 1 to 2 weeks. Custom website development projects generally take 2 to 4 weeks depending on scope, design requirements, and content readiness.",
+    },
+    {
+      question: "Will our staff need technical training to use these solutions?",
+      answer:
+        "No specialized technical training is required. We deliberately engineer solutions to work natively inside the tools your team already relies on every day (such as email, spreadsheets, or chat). We also provide complete documentation and a personalized walkthrough.",
+    },
+  ];
+
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://vown.site",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Services",
+            item: "https://vown.site/services",
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="py-20 sm:py-28 bg-[#F8FAFC] dark:bg-[#090D16] transition-colors duration-200">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
@@ -223,6 +309,43 @@ export default function ServicesPage() {
             );
           })}
         </div>
+
+        {/* AEO / User FAQ Section */}
+        <MotionWrap delay={0.12} direction="up" className="mt-20 sm:mt-28">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs mb-4">
+              <HelpCircle className="w-3.5 h-3.5 text-[#334155] dark:text-slate-300" />
+              <span className="text-xs font-semibold tracking-tight text-[#334155] dark:text-slate-200">
+                Frequently Asked Questions
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight mb-4">
+              Clear answers to common questions.
+            </h2>
+            <p className="text-base text-[#64748B] dark:text-slate-400">
+              Everything you need to know about our automation, software integration, and web development services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {faqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className="p-6 sm:p-7 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs hover:shadow-xs transition-shadow"
+              >
+                <h3 className="text-base sm:text-lg font-bold text-[#0F172A] dark:text-white mb-2.5 flex items-start gap-2">
+                  <span className="font-mono text-xs font-semibold text-[#94A3B8] dark:text-slate-500 mt-1">
+                    Q{idx + 1}.
+                  </span>
+                  <span>{faq.question}</span>
+                </h3>
+                <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed pl-6">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </MotionWrap>
 
         {/* Bottom Consultation Banner */}
         <MotionWrap delay={0.15} direction="up" className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-transparent dark:border-slate-800 shadow-xl">
