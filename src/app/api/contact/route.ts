@@ -40,16 +40,6 @@ export async function POST(request: Request) {
     const resendApiKey = process.env.RESEND_API_KEY;
     const isBackendConfigured = Boolean(resendApiKey);
 
-    // Log the inquiry for operational audit
-    console.log("[VOwn Contact Inquiry Received]:", {
-      name,
-      email,
-      service: service || "General Inquiry",
-      message,
-      timestamp: new Date().toISOString(),
-      backendDispatchConfigured: isBackendConfigured,
-    });
-
     if (isBackendConfigured) {
       // If RESEND_API_KEY is present, send using Resend API:
       try {
@@ -75,21 +65,20 @@ export async function POST(request: Request) {
         return NextResponse.json({
           success: true,
           status: "delivered",
-          message: "Thank you! Your message has been sent directly to admin@vown.site.",
+          message: "Thanks for reaching out. Your message has been sent to admin@vown.site.",
         });
       } catch (sendErr) {
         console.error("Failed to send via Resend:", sendErr);
-        // Fall back to recorded status
+        // Offer an email-app fallback without claiming delivery.
       }
     }
 
-    // When no third-party email provider key is configured in .env.local:
-    // Inform the user honestly as required by the VOwn guidelines.
+    // Email is not configured or sending failed: offer a mailto fallback.
     return NextResponse.json({
       success: true,
       status: "dev_received",
       message:
-        "Your message was recorded locally in the VOwn backend. To automatically dispatch real-time emails to admin@vown.site, set RESEND_API_KEY in your deployment environment.",
+        "Email delivery is not available through this form right now. Please use your email app to send the prepared message.",
       data: {
         name,
         email,
