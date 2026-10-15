@@ -7,14 +7,14 @@ import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/M
 export const metadata: Metadata = {
   title: "VOwn",
   description:
-    "Learn about VOwn: our mission, values, and focus on building dependable AI workflow automations, software integrations, and modern websites for business growth.",
+    "Meet VOwn, a technology studio focused on useful automation, connected tools, and clear websites for real business needs.",
   alternates: {
     canonical: "https://vown.site/about",
   },
   openGraph: {
-    title: "About VOwn — Practical AI Automation & Digital Systems for Growing Businesses",
+    title: "About VOwn | Technology Made Useful",
     description:
-      "Learn about VOwn: our mission, values, and focus on building dependable AI workflow automations, software integrations, and modern websites for business growth.",
+      "Meet VOwn, a technology studio focused on useful automation, connected tools, and clear websites for real business needs.",
     url: "https://vown.site/about",
     siteName: "VOwn",
     images: [
@@ -34,45 +34,45 @@ export default function AboutPage() {
   const beliefs = [
     {
       icon: Cpu,
-      title: "Utility Over Hype",
+      title: "Practical Comes First",
       description:
-        "Technology should do a real job. We build automations and websites that eliminate repetitive friction and save real time, rather than chasing temporary industry buzzwords.",
+        "A good solution solves a real problem. We focus on what will make daily work clearer and easier, not technology added just for show.",
     },
     {
       icon: ShieldCheck,
-      title: "Reliable Craft",
+      title: "Care in the Details",
       description:
-        "We build systems to last. Clean code, tested data connections, and fast page loads mean your software runs smoothly without constant downtime or headaches.",
+        "Thoughtful design and careful testing matter. We pay attention to how a system behaves in everyday use, not just how it looks in a demo.",
     },
     {
       icon: HeartHandshake,
-      title: "Honest Communication",
+      title: "Straightforward Conversations",
       description:
-        "We talk in plain English. No confusing acronyms, artificial sales pressure, or inflated claims. You always know what is being built, how it works, and what it costs.",
+        "We explain our recommendations, discuss trade-offs, and keep decisions easy to understand. Questions are always part of the process.",
     },
     {
       icon: Sparkles,
-      title: "Long-Term Value",
+      title: "Ready for What Comes Next",
       description:
-        "We measure success by whether your business operates better six months and two years down the road—not just on the day we launch.",
+        "Your needs will change. We aim for solutions that can be understood, maintained, and improved as your business evolves.",
     },
   ];
 
   const focusAreas = [
     {
-      title: "Automating Busywork",
+      title: "Simplifying Repetitive Work",
       description:
-        "Extracting data from forms, processing invoices, routing customer messages, and handling repetitive admin tasks so your team can focus on people.",
+        "Helping teams handle forms, invoices, customer requests, and routine admin work with fewer manual steps.",
     },
     {
-      title: "Connecting Your Tools",
+      title: "Joining the Dots Between Tools",
       description:
-        "Linking your website, CRM, billing, and communication tools into automated pipelines with zero manual re-typing.",
+        "Connecting compatible apps so information can move between your website, CRM, billing, and team tools.",
     },
     {
-      title: "Building Clear Websites",
+      title: "Making Websites Easier to Use",
       description:
-        "Designing fast, responsive websites with clean typography, clear business messaging, and instant load times that turn visitors into clients.",
+        "Creating responsive websites with useful content, thoughtful layouts, and a clear path to contact your business.",
     },
   ];
 
@@ -112,7 +112,7 @@ export default function AboutPage() {
         url: "https://vown.site/about",
         name: "About VOwn",
         description:
-          "VOwn is a technology studio focused on practical digital solutions that help growing businesses run smoother and save time.",
+          "VOwn builds useful automations, connected workflows, and clear websites to make everyday business work easier.",
         mainEntity: {
           "@id": "https://vown.site/#organization",
         },
@@ -133,16 +133,16 @@ export default function AboutPage() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#334155] dark:bg-slate-300" />
             <span className="text-xs font-semibold tracking-tight text-[#334155] dark:text-slate-200">
-              Who We Are
+              Meet VOwn
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            Technology should solve problems,
+            Technology should help people,
             <br />
-            <span className="text-[#334155] dark:text-slate-300">not create more.</span>
+            <span className="text-[#334155] dark:text-slate-300">not get in their way.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            VOwn is a technology studio focused on practical digital solutions that help growing businesses run smoother and save time.
+            VOwn builds useful automations, connected workflows, and clear websites to make everyday business work easier.
           </p>
         </MotionWrap>
 
@@ -150,18 +150,18 @@ export default function AboutPage() {
         <MotionWrap delay={0.2} direction="up" className="p-8 sm:p-14 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm mb-16 sm:mb-24">
           <div className="max-w-4xl">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-4">
-              Our Mindset
+              What Drives Us
             </div>
             <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0F172A] dark:text-white tracking-tight leading-snug mb-8">
-              &ldquo;Too much business software is slow, disconnected, and frustrating to use. We started VOwn to build the opposite: practical automations, clean websites, and tools that make daily work simpler.&rdquo;
+              &ldquo;The best technology is the kind that makes your day easier. Clear, useful, and built around how people actually work.&rdquo;
             </blockquote>
 
             <div className="space-y-4 text-base sm:text-lg text-[#475569] dark:text-slate-300 leading-relaxed">
               <p>
-                Every day, businesses lose hours copying data between different software, answering the same questions, and fighting slow websites. Technology is supposed to help you get more done, not add to your to-do list.
+                Business tools should help your team move forward, not create extra steps. When information lives in too many places, even simple tasks can become frustrating.
               </p>
               <p>
-                We work closely with business owners and small teams to identify what&apos;s holding them back. Then we build focused, dependable solutions that remove the friction and keep working quietly in the background.
+                We start by understanding the problem. Then we bring the right mix of automation, integrations, and website design to make the experience simpler.
               </p>
             </div>
           </div>
@@ -171,10 +171,10 @@ export default function AboutPage() {
         <div className="mb-16 sm:mb-24">
           <MotionWrap delay={0.1} direction="up" className="max-w-2xl mb-12">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-2">
-              Studio Values
+              What Matters to Us
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
-              What we believe in.
+              Useful work, done thoughtfully.
             </h2>
           </MotionWrap>
 
@@ -204,10 +204,10 @@ export default function AboutPage() {
         <MotionWrap delay={0.1} direction="up" className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm mb-16 sm:mb-24">
           <div className="max-w-2xl mb-10">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-2">
-              How We Help
+              Our Focus
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
-              Where we focus our efforts.
+              Three ways we can help your business.
             </h2>
           </div>
 
@@ -226,13 +226,13 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="max-w-md">
               <div className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">
-                Reliable Tools
+                Our Toolkit
               </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                Modern, tested technologies
+                Tools chosen for the job
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-2">
-                We select tools with proven track records so your systems remain stable, secure, and fast.
+                We choose technologies based on what your project needs, with usability, maintainability, and performance in mind.
               </p>
             </div>
 
@@ -252,14 +252,14 @@ export default function AboutPage() {
         {/* Bottom CTA */}
         <MotionWrap delay={0.2} direction="up" className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs text-center max-w-3xl mx-auto">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white tracking-tight mb-3">
-            Interested in working together?
+            Let's make something easier.
           </h3>
           <p className="text-sm text-[#64748B] dark:text-slate-400 mb-6 max-w-lg mx-auto">
-            We welcome conversations with businesses looking to automate tasks, connect software, or launch a new website.
+            Tell us the problem you want to solve. We can explore a useful way forward together.
           </p>
           <div className="flex items-center justify-center gap-3">
             <Button href="/contact" variant="primary" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
-              Get in Touch
+              Start a Conversation
             </Button>
           </div>
         </MotionWrap>
