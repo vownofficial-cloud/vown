@@ -111,7 +111,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       {/* 1. Hero Section */}
-      <section className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 overflow-hidden bg-[#F8FAFC] dark:bg-[#090D16] bg-grid-subtle border-b border-[#E2E8F0] dark:border-slate-800/80 transition-colors duration-200">
+      <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden bg-[#F8FAFC] dark:bg-[#090D16] bg-grid-subtle border-b border-[#E2E8F0] dark:border-slate-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <MotionWrap delay={0.1} direction="up" className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
