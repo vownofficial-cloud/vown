@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { siteConfig } from "@/data/siteConfig";
 import { Button } from "@/components/ui/Button";
@@ -48,12 +48,14 @@ function ContactFormContent() {
   const [mailtoFallback, setMailtoFallback] = useState<string | null>(null);
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
 
-  useEffect(() => {
-    const serviceParam = searchParams.get("service");
+  const serviceParam = searchParams.get("service");
+  const [prevServiceParam, setPrevServiceParam] = useState(serviceParam);
+  if (serviceParam !== prevServiceParam) {
+    setPrevServiceParam(serviceParam);
     if (serviceParam) {
       setFormData((prev) => ({ ...prev, service: getServiceLabel(serviceParam) }));
     }
-  }, [searchParams]);
+  }
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(siteConfig.contactEmail);

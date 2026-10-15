@@ -1,17 +1,13 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/data/siteConfig";
 import { Logo } from "@/components/brand/Logo";
 import { Mail, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
-  const [currentYear, setCurrentYear] = useState<number>(2026);
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
+  const currentYear = 2026;
 
   return (
     <footer className="bg-white dark:bg-[#0B0F17] border-t border-[#E2E8F0] dark:border-slate-800/80 pt-16 pb-12 text-[#64748B] dark:text-slate-400 transition-colors duration-200">

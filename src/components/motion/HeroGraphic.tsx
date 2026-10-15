@@ -1,17 +1,13 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import React, { useState, useSyncExternalStore } from "react";
+import { useReducedMotion } from "framer-motion";
 import { Brain, Cpu, GitBranch, Layers, Sparkles, Terminal } from "lucide-react";
+
+const emptySubscribe = () => () => {};
 
 export function HeroGraphic() {
   const shouldReduceMotion = useReducedMotion();
   const [activeNode, setActiveNode] = useState<number | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
 
   // System nodes data
   const nodes = [
@@ -179,7 +175,6 @@ export function HeroGraphic() {
             {/* Interactive Nodes */}
             {nodes.map((node) => {
               const isHovered = activeNode === node.id;
-              const Icon = node.icon;
 
               return (
                 <g
