@@ -7,14 +7,14 @@ import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/M
 export const metadata: Metadata = {
   title: "VOwn",
   description:
-    "See how VOwn plans, builds, tests, and improves practical automations, business integrations, and websites.",
+    "Big idea? Let's make it real. See VOwn's simple four-step way to plan, build, and improve your project.",
   alternates: {
     canonical: "https://vown.site/approach",
   },
   openGraph: {
-    title: "How VOwn Works | From Idea to Launch",
+    title: "How VOwn Works | No Fuss, Just Progress",
     description:
-      "See how VOwn plans, builds, tests, and improves practical automations, business integrations, and websites.",
+      "Big idea? Let's make it real. See VOwn's simple four-step way to plan, build, and improve your project.",
     url: "https://vown.site/approach",
     siteName: "VOwn",
     images: [
@@ -36,10 +36,10 @@ export default function ApproachPage() {
       step: "01",
       name: "Discover",
       phase: "Phase 1",
-      tagline: "Understand the real problem",
+      tagline: "First, let's find the friction.",
       icon: Compass,
       description:
-        "First, we listen. We look at the work you do today, the tools involved, and the steps causing delays. Together, we agree on the problem to solve and what a good result should look like.",
+        "Tell us what feels slow, messy, or more complicated than it should be. We'll look at your current setup and agree on the most useful thing to fix first.",
       deliverables: [
         "A clear picture of today's workflow",
         "The tools and people involved",
@@ -50,10 +50,10 @@ export default function ApproachPage() {
       step: "02",
       name: "Design",
       phase: "Phase 2",
-      tagline: "Turn ideas into a clear plan",
+      tagline: "Let's map the better way.",
       icon: PencilRuler,
       description:
-        "We map out how the solution should work before building it. That means deciding what connects, what changes, and what needs a human check. We review the plan with you so there are fewer surprises.",
+        "Before we build, we sketch the flow, plan the screens or connections, and show you what will happen. You get a say before we move ahead.",
       deliverables: [
         "A proposed workflow or page layout",
         "The key connections and decisions",
@@ -64,10 +64,10 @@ export default function ApproachPage() {
       step: "03",
       name: "Build",
       phase: "Phase 3",
-      tagline: "Build, connect, and test",
+      tagline: "Time to bring it to life.",
       icon: Code2,
       description:
-        "With the plan agreed, we build the solution in manageable steps. We test realistic situations, check important details, and make changes where the experience can be improved.",
+        "Now the idea becomes something you can use. We build in steps, try real-life scenarios, and fine-tune the details that matter.",
       deliverables: [
         "Working features to review",
         "Checks for key integrations",
@@ -78,10 +78,10 @@ export default function ApproachPage() {
       step: "04",
       name: "Improve",
       phase: "Phase 4",
-      tagline: "Launch and learn",
+      tagline: "Launch. Learn. Level up.",
       icon: RefreshCw,
       description:
-        "We help you move from testing to everyday use. Your team gets an explanation of how things work, and we discuss any follow-up changes or support that might be useful.",
+        "We help you launch, show your team how things work, and discuss what to improve next. Good tech should keep up as your needs change.",
       deliverables: [
         "A practical launch checklist",
         "A handover your team can follow",
@@ -92,19 +92,19 @@ export default function ApproachPage() {
 
   const principles = [
     {
-      title: "Clear Communication",
+      title: "No Guesswork",
       description:
-        "You should know who to speak to, what is being worked on, and when to expect an update. We keep the conversation focused and understandable.",
+        "No disappearing acts or confusing updates. We keep the conversation open and the next step clear.",
     },
     {
-      title: "Decisions You Can Follow",
+      title: "Plain English, Always",
       description:
-        "We explain what we are recommending and why. You can ask questions, review the plan, and make informed choices along the way.",
+        "We tell you what we're recommending and why, without burying the point in technical talk.",
     },
     {
-      title: "A Thoughtful Handover",
+      title: "A Handover That Makes Sense",
       description:
-        "We discuss access, documentation, account ownership, and future maintenance before handover, so you know how the finished solution will be managed.",
+        "We walk through access, documentation, ownership, and what happens after launch so you know where things stand.",
     },
   ];
 
@@ -163,12 +163,12 @@ export default function ApproachPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            Start with clarity.
+            Big ideas.
             <br />
-            <span className="text-[#334155] dark:text-slate-300">Build with purpose.</span>
+            <span className="text-[#334155] dark:text-slate-300">Simple steps.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            From the first conversation to launch, we use four simple steps to turn a real problem into a useful solution.
+            No complicated process. No unnecessary surprises. Just a clear path from 'what if' to 'it's working.'
           </p>
         </MotionWrap>
 
@@ -208,7 +208,7 @@ export default function ApproachPage() {
                     {/* Deliverables Checklist */}
                     <div className="pt-5 border-t border-slate-100 dark:border-slate-800">
                       <div className="text-[10px] font-mono uppercase tracking-wider text-[#94A3B8] dark:text-slate-500 mb-3">
-                        What We Work Toward
+                        What You'll See
                       </div>
                       <ul className="space-y-2">
                         {stage.deliverables.map((item) => (
@@ -226,14 +226,14 @@ export default function ApproachPage() {
           </StaggerContainer>
         </div>
 
-        {/* How We Collaborate */}
+        {/* How We Keep It Simple */}
         <MotionWrap delay={0.1} direction="up" className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm mb-16 sm:mb-24">
           <div className="max-w-2xl mb-8">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-2">
-              How We Collaborate
+              How We Keep It Simple
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
-              Good work comes from good communication.
+              Good ideas deserve good teamwork.
             </h2>
           </div>
 
@@ -251,14 +251,14 @@ export default function ApproachPage() {
         <MotionWrap delay={0.15} direction="up" className="p-8 sm:p-12 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-transparent dark:border-slate-800 shadow-xl">
           <div className="max-w-xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-white">
-              Ready to make something work better?
+              Got an idea? Let's make it real.
             </h3>
             <p className="text-sm text-slate-300 dark:text-slate-300 leading-relaxed">
-              Tell us what you want to improve. We can talk through the challenge and a sensible place to begin.
+              Share what you've got in mind. We'll help you figure out the next move.
             </p>
           </div>
           <Button href="/contact" variant="white" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
-            Let's Talk About It
+            Let's Make a Plan
           </Button>
         </MotionWrap>
 
