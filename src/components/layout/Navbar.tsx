@@ -16,6 +16,10 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  // Keep the homepage sections accessible without listing them in the header menu.
+  const headerNavItems = siteConfig.navItems.filter(
+    (item) => item.label !== "What We Do" && item.label !== "Approach"
+  );
   const [activeHash, setActiveHash] = useState("");
 
   // Keep section navigation in sync when arriving from other pages or browser history.
@@ -78,7 +82,7 @@ export function Navbar() {
 
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex min-w-0 items-center gap-0.5 xl:gap-1 px-2 xl:px-3 py-1.5 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs">
-              {siteConfig.navItems.map((item) => {
+              {headerNavItems.map((item) => {
                 const active = isLinkActive(item.href);
                 return (
                   <Link
@@ -156,7 +160,7 @@ export function Navbar() {
                 <span>vown.site</span>
               </div>
               <div className="flex flex-col space-y-1.5">
-                {siteConfig.navItems.map((item) => {
+                {headerNavItems.map((item) => {
                   const active = isLinkActive(item.href);
                   return (
                     <Link
