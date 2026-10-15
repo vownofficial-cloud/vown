@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Contact VOwn — Discuss Your Automation, Integration, or Website Project",
+  title: "VOwn",
   description:
     "Get in touch with the VOwn team. We respond directly within 24 hours to discuss your business automation, software integrations, or custom website requirements.",
   alternates: {
