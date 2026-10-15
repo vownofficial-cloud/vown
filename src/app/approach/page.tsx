@@ -7,14 +7,14 @@ import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/M
 export const metadata: Metadata = {
   title: "VOwn",
   description:
-    "How VOwn works: Discover, Design, Build, and Improve. A transparent, 4-phase methodology for AI automation, integrations, and websites built for real business ROI.",
+    "See how VOwn plans, builds, tests, and improves practical automations, business integrations, and websites.",
   alternates: {
     canonical: "https://vown.site/approach",
   },
   openGraph: {
-    title: "Our Approach — Clear, Practical Automation & Web Process | VOwn",
+    title: "How VOwn Works | From Idea to Launch",
     description:
-      "How VOwn works: Discover, Design, Build, and Improve. A transparent, 4-phase methodology for AI automation, integrations, and websites built for real business ROI.",
+      "See how VOwn plans, builds, tests, and improves practical automations, business integrations, and websites.",
     url: "https://vown.site/approach",
     siteName: "VOwn",
     images: [
@@ -36,75 +36,75 @@ export default function ApproachPage() {
       step: "01",
       name: "Discover",
       phase: "Phase 1",
-      tagline: "Finding what slows you down",
+      tagline: "Understand the real problem",
       icon: Compass,
       description:
-        "We start by listening. We review your daily workflow, identify repetitive tasks that waste hours, and see which tools your team relies on. No guessing—just clear, agreed-upon priorities.",
+        "First, we listen. We look at the work you do today, the tools involved, and the steps causing delays. Together, we agree on the problem to solve and what a good result should look like.",
       deliverables: [
-        "Audit of daily bottlenecks",
-        "Map of software you use",
-        "Clear priority plan and scope",
+        "A clear picture of today's workflow",
+        "The tools and people involved",
+        "A shared goal and starting scope",
       ],
     },
     {
       step: "02",
       name: "Design",
       phase: "Phase 2",
-      tagline: "Planning before building",
+      tagline: "Turn ideas into a clear plan",
       icon: PencilRuler,
       description:
-        "Before writing any code or setting up automations, we plan the solution in plain English. You see exactly how data moves, how screens look, and what changes before we build.",
+        "We map out how the solution should work before building it. That means deciding what connects, what changes, and what needs a human check. We review the plan with you so there are fewer surprises.",
       deliverables: [
-        "Simple visual layout drafts",
-        "Clear data and connection maps",
-        "Transparent timeline and milestones",
+        "A proposed workflow or page layout",
+        "The key connections and decisions",
+        "A practical delivery plan",
       ],
     },
     {
       step: "03",
       name: "Build",
       phase: "Phase 3",
-      tagline: "Constructing reliable solutions",
+      tagline: "Build, connect, and test",
       icon: Code2,
       description:
-        "We build dependable software and automations using modern, tested tools. Every step is tested with realistic situations so you never have to worry about broken data or unexpected errors.",
+        "With the plan agreed, we build the solution in manageable steps. We test realistic situations, check important details, and make changes where the experience can be improved.",
       deliverables: [
-        "Tested automations and website",
-        "Reliable software connections",
-        "Hands-on checks across phones and desktops",
+        "Working features to review",
+        "Checks for key integrations",
+        "Testing on relevant devices and workflows",
       ],
     },
     {
       step: "04",
       name: "Improve",
       phase: "Phase 4",
-      tagline: "Smooth launch and continuous support",
+      tagline: "Launch and learn",
       icon: RefreshCw,
       description:
-        "Launching is just the beginning. We walk your team through how everything works, ensure the transition is smooth, and refine features as your business evolves.",
+        "We help you move from testing to everyday use. Your team gets an explanation of how things work, and we discuss any follow-up changes or support that might be useful.",
       deliverables: [
-        "Smooth launch and domain setup",
-        "Team walkthrough and instructions",
-        "Ongoing updates and adjustments",
+        "A practical launch checklist",
+        "A handover your team can follow",
+        "Next-step recommendations",
       ],
     },
   ];
 
   const principles = [
     {
-      title: "Talk Directly With Builders",
+      title: "Clear Communication",
       description:
-        "You collaborate directly with the designers and developers creating your system. No account managers or delayed replies.",
+        "You should know who to speak to, what is being worked on, and when to expect an update. We keep the conversation focused and understandable.",
     },
     {
-      title: "Always in Plain English",
+      title: "Decisions You Can Follow",
       description:
-        "We avoid confusing industry buzzwords and explain every decision clearly so you can make informed business choices.",
+        "We explain what we are recommending and why. You can ask questions, review the plan, and make informed choices along the way.",
     },
     {
-      title: "You Own Everything",
+      title: "A Thoughtful Handover",
       description:
-        "All code, accounts, logins, and assets belong to your company from day one. No hidden retainers or vendor lock-in.",
+        "We discuss access, documentation, account ownership, and future maintenance before handover, so you know how the finished solution will be managed.",
     },
   ];
 
@@ -130,9 +130,9 @@ export default function ApproachPage() {
       },
       {
         "@type": "HowTo",
-        name: "VOwn's 4-Phase Automation and Web Development Process",
+        name: "VOwn's Four-Step Project Process",
         description:
-          "How VOwn designs, builds, and deploys custom AI automations, integrations, and websites for growing businesses.",
+          "How VOwn discovers needs, plans the solution, builds carefully, and supports a clear launch.",
         step: stages.map((stage, idx) => ({
           "@type": "HowToStep",
           position: idx + 1,
@@ -163,12 +163,12 @@ export default function ApproachPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            Clear thinking.
+            Start with clarity.
             <br />
-            <span className="text-[#334155] dark:text-slate-300">Thoughtful building. Continuous improvement.</span>
+            <span className="text-[#334155] dark:text-slate-300">Build with purpose.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            Every project follows a straightforward, predictable path. You always know what is being built, how it works, and what comes next.
+            From the first conversation to launch, we use four simple steps to turn a real problem into a useful solution.
           </p>
         </MotionWrap>
 
@@ -208,7 +208,7 @@ export default function ApproachPage() {
                     {/* Deliverables Checklist */}
                     <div className="pt-5 border-t border-slate-100 dark:border-slate-800">
                       <div className="text-[10px] font-mono uppercase tracking-wider text-[#94A3B8] dark:text-slate-500 mb-3">
-                        What you get
+                        What We Work Toward
                       </div>
                       <ul className="space-y-2">
                         {stage.deliverables.map((item) => (
@@ -226,14 +226,14 @@ export default function ApproachPage() {
           </StaggerContainer>
         </div>
 
-        {/* Working Principles */}
+        {/* How We Collaborate */}
         <MotionWrap delay={0.1} direction="up" className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm mb-16 sm:mb-24">
           <div className="max-w-2xl mb-8">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-2">
-              Working Principles
+              How We Collaborate
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
-              What to expect when working with VOwn.
+              Good work comes from good communication.
             </h2>
           </div>
 
@@ -251,14 +251,14 @@ export default function ApproachPage() {
         <MotionWrap delay={0.15} direction="up" className="p-8 sm:p-12 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-transparent dark:border-slate-800 shadow-xl">
           <div className="max-w-xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-white">
-              Have a project in mind?
+              Ready to make something work better?
             </h3>
             <p className="text-sm text-slate-300 dark:text-slate-300 leading-relaxed">
-              We start with a quick, no-pressure discovery conversation to see if we&apos;re a good fit for each other.
+              Tell us what you want to improve. We can talk through the challenge and a sensible place to begin.
             </p>
           </div>
           <Button href="/contact" variant="white" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
-            Start a Conversation
+            Let's Talk About It
           </Button>
         </MotionWrap>
 
