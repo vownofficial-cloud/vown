@@ -7,14 +7,14 @@ import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/M
 export const metadata: Metadata = {
   title: "VOwn",
   description:
-    "Meet VOwn, a technology studio focused on useful automation, connected tools, and clear websites for real business needs.",
+    "Meet VOwn. We make everyday work easier with smart automations, connected tools, and websites that make sense.",
   alternates: {
     canonical: "https://vown.site/about",
   },
   openGraph: {
-    title: "About VOwn | Technology Made Useful",
+    title: "About VOwn | Less Hype, More Help",
     description:
-      "Meet VOwn, a technology studio focused on useful automation, connected tools, and clear websites for real business needs.",
+      "Meet VOwn. We make everyday work easier with smart automations, connected tools, and websites that make sense.",
     url: "https://vown.site/about",
     siteName: "VOwn",
     images: [
@@ -34,45 +34,45 @@ export default function AboutPage() {
   const beliefs = [
     {
       icon: Cpu,
-      title: "Practical Comes First",
+      title: "Less Hype. More Help.",
       description:
-        "A good solution solves a real problem. We focus on what will make daily work clearer and easier, not technology added just for show.",
+        "We don't add tech just to sound clever. We focus on the stuff that actually makes your day better.",
     },
     {
       icon: ShieldCheck,
-      title: "Care in the Details",
+      title: "Little Details. Big Difference.",
       description:
-        "Thoughtful design and careful testing matter. We pay attention to how a system behaves in everyday use, not just how it looks in a demo.",
+        "A great idea is only useful if it works in real life. We care about the small things that make it feel right.",
     },
     {
       icon: HeartHandshake,
-      title: "Straightforward Conversations",
+      title: "Good Conversations. No Jargon.",
       description:
-        "We explain our recommendations, discuss trade-offs, and keep decisions easy to understand. Questions are always part of the process.",
+        "No confusing buzzwords. Just clear advice, real questions, and decisions you can feel good about.",
     },
     {
       icon: Sparkles,
-      title: "Ready for What Comes Next",
+      title: "Built for What's Next",
       description:
-        "Your needs will change. We aim for solutions that can be understood, maintained, and improved as your business evolves.",
+        "Your business won't stand still. We make decisions with tomorrow in mind, not just launch day.",
     },
   ];
 
   const focusAreas = [
     {
-      title: "Simplifying Repetitive Work",
+      title: "Goodbye, Repeat Tasks",
       description:
-        "Helping teams handle forms, invoices, customer requests, and routine admin work with fewer manual steps.",
+        "Less time sorting forms, chasing updates, and doing the same admin work again.",
     },
     {
-      title: "Joining the Dots Between Tools",
+      title: "Hello, Connected Tools",
       description:
-        "Connecting compatible apps so information can move between your website, CRM, billing, and team tools.",
+        "Your CRM, website, and other tools sharing information instead of living in separate worlds.",
     },
     {
-      title: "Making Websites Easier to Use",
+      title: "Websites That Feel Effortless",
       description:
-        "Creating responsive websites with useful content, thoughtful layouts, and a clear path to contact your business.",
+        "Clear words, smooth layouts, and a website that makes it easy to take the next step.",
     },
   ];
 
@@ -112,7 +112,7 @@ export default function AboutPage() {
         url: "https://vown.site/about",
         name: "About VOwn",
         description:
-          "VOwn builds useful automations, connected workflows, and clear websites to make everyday business work easier.",
+          "We're a technology studio for teams who want to spend less time fighting their tools and more time getting things done.",
         mainEntity: {
           "@id": "https://vown.site/#organization",
         },
@@ -137,12 +137,12 @@ export default function AboutPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            Technology should help people,
+            Tech should make life easier.
             <br />
-            <span className="text-[#334155] dark:text-slate-300">not get in their way.</span>
+            <span className="text-[#334155] dark:text-slate-300">Full stop.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            VOwn builds useful automations, connected workflows, and clear websites to make everyday business work easier.
+            We're a technology studio for teams who want to spend less time fighting their tools and more time getting things done.
           </p>
         </MotionWrap>
 
@@ -150,18 +150,18 @@ export default function AboutPage() {
         <MotionWrap delay={0.2} direction="up" className="p-8 sm:p-14 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm mb-16 sm:mb-24">
           <div className="max-w-4xl">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-4">
-              What Drives Us
+              Why We Do It
             </div>
             <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0F172A] dark:text-white tracking-tight leading-snug mb-8">
-              &ldquo;The best technology is the kind that makes your day easier. Clear, useful, and built around how people actually work.&rdquo;
+              &ldquo;The best tech doesn't demand your attention. It gives your attention back.&rdquo;
             </blockquote>
 
             <div className="space-y-4 text-base sm:text-lg text-[#475569] dark:text-slate-300 leading-relaxed">
               <p>
-                Business tools should help your team move forward, not create extra steps. When information lives in too many places, even simple tasks can become frustrating.
+                One more spreadsheet. One more tab. One more task you wish you could skip. We know how quickly the little things pile up.
               </p>
               <p>
-                We start by understanding the problem. Then we bring the right mix of automation, integrations, and website design to make the experience simpler.
+                That's where VOwn comes in. We find a smarter way to handle the everyday stuff, using automation, connected tools, or a better website.
               </p>
             </div>
           </div>
@@ -171,10 +171,10 @@ export default function AboutPage() {
         <div className="mb-16 sm:mb-24">
           <MotionWrap delay={0.1} direction="up" className="max-w-2xl mb-12">
             <div className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-400 mb-2">
-              What Matters to Us
+              The VOwn Way
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
-              Useful work, done thoughtfully.
+              Good tech. Good people. Good decisions.
             </h2>
           </MotionWrap>
 
@@ -207,7 +207,7 @@ export default function AboutPage() {
               Our Focus
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
-              Three ways we can help your business.
+              A little less hassle, in three big ways.
             </h2>
           </div>
 
@@ -226,13 +226,13 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="max-w-md">
               <div className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">
-                Our Toolkit
+                Behind the Scenes
               </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                Tools chosen for the job
+                The right tools, not every tool
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-2">
-                We choose technologies based on what your project needs, with usability, maintainability, and performance in mind.
+                We pick what fits your project best. The goal isn't a long list of tech names. It's a result that works for you.
               </p>
             </div>
 
@@ -252,14 +252,14 @@ export default function AboutPage() {
         {/* Bottom CTA */}
         <MotionWrap delay={0.2} direction="up" className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs text-center max-w-3xl mx-auto">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white tracking-tight mb-3">
-            Let's make something easier.
+            Let's build your next good thing.
           </h3>
           <p className="text-sm text-[#64748B] dark:text-slate-400 mb-6 max-w-lg mx-auto">
-            Tell us the problem you want to solve. We can explore a useful way forward together.
+            No perfect brief needed. Bring the idea, the messy process, or the big question. We'll take it from there.
           </p>
           <div className="flex items-center justify-center gap-3">
             <Button href="/contact" variant="primary" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
-              Start a Conversation
+              Let's Talk
             </Button>
           </div>
         </MotionWrap>
