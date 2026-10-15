@@ -20,14 +20,14 @@ export function Footer() {
           <div className="md:col-span-5 space-y-4">
             <Logo variant="wordmark" size="md" href="/" showDomainBadge />
             <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed max-w-sm">
-              Better workflows. Connected tools. Clear websites. We build useful technology to help your business run more smoothly.
+              Goodbye busywork. Hello better days. Smart automations, connected tools, and websites built around you.
             </p>
             <div className="flex items-center gap-2 pt-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 text-[11px] font-mono text-[#334155] dark:text-slate-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                 vown.site
               </span>
-              <span className="text-xs text-[#94A3B8] dark:text-slate-500">Automation · Integrations · Web</span>
+              <span className="text-xs text-[#94A3B8] dark:text-slate-500">Tech that makes sense</span>
             </div>
           </div>
 
@@ -70,8 +70,8 @@ export function Footer() {
 
             <div className="pt-3">
               <div className="p-3.5 rounded-xl bg-[#F8FAFC] dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 text-xs text-[#64748B] dark:text-slate-400 leading-relaxed">
-                Have a project in mind? Write to{" "}
-                <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span>. Tell us what you need and we&apos;ll take it from there.
+                Got an idea? Say hello at{" "}
+                <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span>. We'd love to hear what you're working on.
               </div>
             </div>
           </div>
