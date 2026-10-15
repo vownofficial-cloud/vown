@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/siteConfig";
 import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "VOwn · AI Automation, Business Software Integrations & Web Development",
+  title: "VOwn",
   description:
     "We automate repetitive work, connect your tools, and build websites that help your business grow. Free up your team's time with practical AI and modern digital solutions.",
   alternates: {
