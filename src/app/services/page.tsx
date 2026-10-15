@@ -8,14 +8,14 @@ import { MotionWrap } from "@/components/motion/MotionWrap";
 export const metadata: Metadata = {
   title: "VOwn",
   description:
-    "Explore practical AI automation, software integrations, and website development with VOwn. See what we can help you improve.",
+    "Less admin. Fewer disconnected tools. A website worth sharing. Discover what VOwn can help you build.",
   alternates: {
     canonical: "https://vown.site/services",
   },
   openGraph: {
     title: "VOwn Services | Automation, Integrations & Websites",
     description:
-      "Explore practical AI automation, software integrations, and website development with VOwn. See what we can help you improve.",
+      "Less admin. Fewer disconnected tools. A website worth sharing. Discover what VOwn can help you build.",
     url: "https://vown.site/services",
     siteName: "VOwn",
     images: [
@@ -37,116 +37,116 @@ export default function ServicesPage() {
       id: "ai-automation",
       number: "01",
       title: "AI Automation",
-      headline: "Take repeat work off your plate.",
+      headline: "Copy. Paste. Repeat? Not anymore.",
       description:
-        "If your team spends too much time copying information, sorting requests, or preparing routine updates, we can help. We design workflows that handle repeatable steps while keeping people involved where decisions matter.",
+        "If you've ever thought, 'Surely there's a faster way to do this,' you're in the right place. We turn repeatable tasks into smart workflows, with people still in control when it matters.",
       icon: BrainCircuit,
       examples: [
         {
-          title: "Automatic Document Processing",
-          detail: "Capture key details from invoices and receipts, then review them before they reach your records.",
+          title: "Paperwork, Minus the Paper Chase",
+          detail: "Pull useful details from invoices and receipts, with a chance to check them before saving.",
         },
         {
-          title: "Smart Inquiry Routing",
-          detail: "Organize incoming questions and route them to the right person or inbox.",
+          title: "The Right Message, to the Right Person",
+          detail: "Sort enquiries and send them where they'll get the right attention.",
         },
         {
-          title: "Internal Knowledge Assistants",
-          detail: "Help your team find useful information in approved internal guides and documents.",
+          title: "Answers Without the Hunt",
+          detail: "Make it easier to find answers in your own approved documents and guides.",
         },
         {
-          title: "Automated Daily Digests",
-          detail: "Bring key updates from the tools you use into one easy-to-read summary.",
+          title: "The Daily Catch-Up",
+          detail: "Get the updates you care about in one easy-to-scan summary.",
         },
       ],
-      outcome: "Less duplicate work, clearer handoffs, and more time for the tasks that need your attention.",
+      outcome: "Less time on repeat tasks. More time for the work only your team can do.",
       contactParam: "ai-automation",
     },
     {
       id: "business-integrations",
       number: "02",
       title: "Business Integrations",
-      headline: "Help your systems share the work.",
+      headline: "Your tools should talk to each other.",
       description:
-        "Your CRM, forms, billing platform, and team tools all hold useful information. We connect compatible systems using APIs or existing connectors so updates can move between them without constant manual copying.",
+        "Tired of updating the same details in three places? We help compatible apps share information, so your CRM, forms, billing, and team tools can work together.",
       icon: Workflow,
       examples: [
         {
-          title: "CRM & Customer Sync",
-          detail: "Keep customer details aligned across your CRM and other connected tools.",
+          title: "Your Customer Info, Together",
+          detail: "Keep customer updates moving between the tools that need them.",
         },
         {
-          title: "Payment & Invoice Automations",
-          detail: "Connect payment events with invoices or internal records where your tools support it.",
+          title: "Payments Meet Paperwork",
+          detail: "Link payments to invoices or records when your platforms allow it.",
         },
         {
-          title: "Instant Team Alerts",
-          detail: "Send useful alerts to your team when important events need attention.",
+          title: "Updates That Reach Your Team",
+          detail: "Send a useful heads-up when something important happens.",
         },
         {
-          title: "Spreadsheet & Database Connectors",
-          detail: "Connect spreadsheets and databases so updates do not have to be entered twice.",
+          title: "From Spreadsheet to System",
+          detail: "Connect spreadsheets and databases instead of entering the same update twice.",
         },
       ],
-      outcome: "Fewer disconnected steps and a smoother flow of information across your business.",
+      outcome: "Less jumping between apps. More confidence in where information goes.",
       contactParam: "business-integrations",
     },
     {
       id: "website-development",
       number: "03",
       title: "Website Development",
-      headline: "Make a stronger first impression online.",
+      headline: "A website people want to explore.",
       description:
-        "A useful website should explain what you do, work well on a phone, and make the next step obvious. We design clear, responsive websites with thoughtful content, simple navigation, and easy ways for visitors to contact you.",
+        "Your website has one big job: make people understand what you do and want to know more. We blend sharp design, clear words, and an easy experience across devices.",
       icon: Layout,
       examples: [
         {
-          title: "Designed for Real Devices",
-          detail: "Build with performance in mind and test the experience across mobile and desktop screens.",
+          title: "Looks Good on Every Screen",
+          detail: "A smooth experience matters on phones, tablets, and laptops alike.",
         },
         {
-          title: "Messaging That Makes Sense",
-          detail: "Explain your services in plain language with a layout that is easy to follow.",
+          title: "Words That Get to the Point",
+          detail: "Say what you do in words people actually understand.",
         },
         {
-          title: "Easy Ways to Get in Touch",
-          detail: "Give potential customers clear contact options and forms that are simple to complete.",
+          title: "A Clear Next Step",
+          detail: "Make it simple for an interested visitor to get in touch.",
         },
         {
-          title: "Content You Can Maintain",
-          detail: "Plan a structure that makes it easier to update your services and information later.",
+          title: "Easy to Keep Fresh",
+          detail: "Make future updates less of a chore with a tidy, maintainable setup.",
         },
       ],
-      outcome: "A clear, useful online home that helps visitors understand you and take the next step.",
+      outcome: "A site that feels like your business and makes the next click easy.",
       contactParam: "website-development",
     },
   ];
 
   const faqs = [
     {
-      question: "What kind of work can VOwn automate?",
+      question: "What can I put on autopilot?",
       answer:
-        "Good starting points include form processing, sorting messages, moving data between tools, preparing reports, and sending reminders. We look at how the task works today before suggesting automation.",
+        "Think forms, follow-ups, updates, reports, and moving information between apps. We'll first look at your workflow to see what makes sense to automate.",
     },
     {
-      question: "Can you connect the tools we already use?",
+      question: "Do I have to change all my apps?",
       answer:
-        "Often, yes. We can assess CRMs, spreadsheets, messaging tools, payment platforms, databases, and custom software. The options depend on the APIs, access, and connectors each tool supports.",
+        "Not necessarily. We start with what you already use and check which apps can connect. The options depend on the access and features your tools provide.",
     },
     {
-      question: "How do you handle access and sensitive information?",
+      question: "What about my data?",
       answer:
-        "We discuss data access before connecting systems, plan for limited permissions, and agree on how credentials and sensitive information will be handled. Any third-party services are part of that discussion.",
+        "Your data deserves care. We'll discuss what access is needed, which services are involved, and how sensitive information should be handled before connecting anything.",
     },
     {
-      question: "How long does a project usually take?",
+      question: "How soon can we get started?",
       answer:
-        "It depends on the scope, the tools involved, and how ready your content or data is. After understanding the project, we can suggest a clear plan and realistic timeline.",
+        "It depends on the project. Tell us what you have in mind, and we'll help you work out the scope, first steps, and a realistic timeline.",
     },
     {
-      question: "Will our team be able to use the result?",
+      question: "Will this be easy for my team to use?",
       answer:
-        "Ease of use is part of the plan. We aim to fit the solution into the way your team already works and explain how to use and maintain it at handover.",
+        "That's the goal. We design around the way your team works and make the handover clear, so using the result doesn't feel like another task.",
     },
   ];
 
@@ -201,12 +201,12 @@ export default function ServicesPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            Less friction.
+            Big ideas.
             <br />
-            <span className="text-[#334155] dark:text-slate-300">Better ways to work.</span>
+            <span className="text-[#334155] dark:text-slate-300">Smarter ways to make them happen.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            Start with the work that slows you down. We will help you find a better way to do it.
+            From the boring daily tasks to the website everyone sees, we bring the right tech to the right problem.
           </p>
         </MotionWrap>
 
@@ -268,7 +268,7 @@ export default function ServicesPage() {
                   {/* Practical Examples */}
                   <div className="pt-8">
                     <div className="text-xs font-mono uppercase tracking-wider text-[#94A3B8] dark:text-slate-500 mb-6">
-                      Where This Can Help
+                      Real-Life Ways It Helps
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {service.examples.map((item) => (
@@ -320,10 +320,10 @@ export default function ServicesPage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight mb-4">
-              Good questions deserve clear answers.
+              Straight answers. Zero jargon.
             </h2>
             <p className="text-base text-[#64748B] dark:text-slate-400">
-              A few things worth knowing before you start a project with VOwn.
+              Curious about how it works? You're not the only one.
             </p>
           </div>
 
@@ -351,14 +351,14 @@ export default function ServicesPage() {
         <MotionWrap delay={0.15} direction="up" className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-transparent dark:border-slate-800 shadow-xl">
           <div className="max-w-xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-white">
-              Not sure where to start?
+              Not sure what you need? That's okay.
             </h3>
             <p className="text-sm text-slate-300 dark:text-slate-300 leading-relaxed">
-              Tell us what feels slow, messy, or difficult. We&apos;ll help you identify a useful first step.
+              You don't need a technical plan. Just tell us what's getting in your way, and we'll start there.
             </p>
           </div>
           <Button href="/contact" variant="white" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
-            Tell Us What You Need
+            Let's Talk It Through
           </Button>
         </MotionWrap>
 
