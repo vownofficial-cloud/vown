@@ -26,8 +26,8 @@ export const siteConfig: SiteConfig = {
     "Less busywork. More possibilities. VOwn automates repetitive tasks, connects your business tools, and builds websites that help you grow.",
   navItems: [
     { label: "Home", href: "/" },
-    { label: "What We Do", href: "/services" },
-    { label: "Approach", href: "/approach" },
+    { label: "What We Do", href: "/#what-we-do" },
+    { label: "Approach", href: "/#approach" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
