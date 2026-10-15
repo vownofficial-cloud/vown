@@ -147,13 +147,13 @@ function ContactFormContent() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            Have something in mind?
+            Big idea? Small headache?
             <br />
-            <span className="text-[#334155] dark:text-slate-300">Let&apos;s talk it through.</span>
+            <span className="text-[#334155] dark:text-slate-300">We&apos;re all ears.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            Tell us what you would like to automate, connect, or build.
-            A few details are enough to start a useful conversation.
+            Maybe a task is taking too long. Maybe your tools don't connect. Maybe it's time for a new website.
+            Whatever it is, tell us a little about it.
           </p>
         </MotionWrap>
 
@@ -175,7 +175,7 @@ function ContactFormContent() {
               </div>
 
               <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed mb-6">
-                Write to us directly if that is easier. A rough idea is fine; you do not need a finished project brief to get started.
+                No forms, no fuss. Drop us a note about your idea or the problem you'd love to solve.
               </p>
 
               {/* Action Buttons */}
@@ -212,7 +212,7 @@ function ContactFormContent() {
             <div className="p-6 rounded-2xl bg-white/70 dark:bg-[#111827]/70 border border-[#E2E8F0] dark:border-slate-800 flex items-start gap-3">
               <Clock className="w-5 h-5 text-[#334155] dark:text-slate-300 shrink-0 mt-0.5" />
               <div className="text-xs text-[#475569] dark:text-slate-300 leading-relaxed">
-                <span className="font-semibold text-[#0F172A] dark:text-white">A thoughtful reply.</span> Send your note to <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span>. We&apos;ll review it and follow up with useful questions or next steps.
+                <span className="font-semibold text-[#0F172A] dark:text-white">Real people. Real replies.</span> Send your idea to <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span>. We&apos;ll review it and follow up with useful questions or next steps.
               </div>
             </div>
           </MotionWrap>
@@ -222,10 +222,10 @@ function ContactFormContent() {
             <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm">
               
               <h2 className="text-2xl font-bold text-[#0F172A] dark:text-white tracking-tight mb-2">
-                Tell Us About Your Project
+                Let's Hear Your Idea
               </h2>
               <p className="text-xs sm:text-sm text-[#64748B] dark:text-slate-400 mb-8">
-                No technical brief needed. Just tell us what you want to improve.
+                You don't need the perfect words. A few details are plenty.
               </p>
 
               {/* Status Notifications */}
@@ -326,7 +326,7 @@ function ContactFormContent() {
                 {/* Area of Interest */}
                 <div>
                   <label htmlFor="service" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
-                    What do you need help with?
+                    What's on your mind?
                   </label>
                   <select
                     id="service"
@@ -344,7 +344,7 @@ function ContactFormContent() {
                 {/* Project Details */}
                 <div>
                   <label htmlFor="message" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
-                    What would you like to improve? <span className="text-rose-500">*</span>
+                    Tell us a little more <span className="text-rose-500">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -355,7 +355,7 @@ function ContactFormContent() {
                       setFormData({ ...formData, message: e.target.value });
                       if (formErrors.message) setFormErrors({ ...formErrors, message: "" });
                     }}
-                    placeholder="A quick description of the challenge, tools involved, or website you have in mind..."
+                    placeholder="What feels slow? What would you love to build? We're listening..."
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#0B0F17] focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-slate-400 focus:border-transparent transition-all resize-y"
                   />
                   {formErrors.message && (
@@ -373,7 +373,7 @@ function ContactFormContent() {
                     className="w-full sm:flex-1 justify-center"
                     icon={<Send className="w-4 h-4" />}
                   >
-                    {status === "loading" ? "Sending..." : "Send My Enquiry"}
+                    {status === "loading" ? "Sending..." : "Let's Start Talking"}
                   </Button>
 
                   <a
@@ -386,7 +386,7 @@ function ContactFormContent() {
                 </div>
 
                 <div className="text-[11px] text-[#94A3B8] dark:text-slate-500 text-center pt-2">
-                  For enquiries, write to{" "}
+                  Want to email instead? Write to{" "}
                   <span className="font-mono text-[#64748B] dark:text-slate-400">admin@vown.site</span>.
                 </div>
               </form>
