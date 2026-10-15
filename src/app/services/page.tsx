@@ -6,7 +6,7 @@ import { BrainCircuit, Workflow, Layout, ArrowUpRight, CheckCircle2, ArrowRight,
 import { MotionWrap } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "AI Automation, Business Integrations & Web Development Services | VOwn",
+  title: "VOwn",
   description:
     "Explore VOwn's business technology services: smart AI workflow automation, cross-platform software integrations, and fast modern websites designed to eliminate busywork.",
   alternates: {
