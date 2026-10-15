@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "We automate repetitive work, connect your tools, and build websites that help your business grow. Practical AI automation and software integrations for businesses.",
+    "VOwn builds practical automations, connected workflows, and clear websites for teams that want less busywork.",
   keywords: [
     "AI Automation for Business",
     "Business Process Automation",
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
     canonical: "https://vown.site",
   },
   openGraph: {
-    title: "VOwn · Technology That Moves You Forward",
+    title: "VOwn · Better systems for better work",
     description:
-      "We automate repetitive work, connect your tools, and build websites that help your business grow.",
+      "Automations, connected tools, and clear websites that help your team spend less time on busywork.",
     url: "https://vown.site",
     siteName: "VOwn",
     images: [
@@ -83,9 +83,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VOwn · Technology That Moves You Forward",
+    title: "VOwn · Better systems for better work",
     description:
-      "We automate repetitive work, connect your tools, and build websites that help your business grow.",
+      "Automations, connected tools, and clear websites that help your team spend less time on busywork.",
     images: ["/brand/vown-primary-logo.png"],
   },
   icons: {
@@ -128,7 +128,7 @@ export default function RootLayout({
         image: "https://vown.site/brand/vown-primary-logo.png",
         email: siteConfig.contactEmail,
         description:
-          "VOwn automates repetitive work, connects business software tools, and builds fast, modern websites that help companies scale efficiently.",
+          "VOwn helps businesses reduce repetitive work, connect everyday software, and build clear, responsive websites.",
         knowsAbout: [
           "AI Automation",
           "Business Process Automation",
