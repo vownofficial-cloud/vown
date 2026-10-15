@@ -5,7 +5,7 @@ import { CheckCircle2, ArrowUpRight, Compass, PencilRuler, Code2, RefreshCw } fr
 import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "Our Approach — Clear, Practical Automation & Web Process | VOwn",
+  title: "VOwn",
   description:
     "How VOwn works: Discover, Design, Build, and Improve. A transparent, 4-phase methodology for AI automation, integrations, and websites built for real business ROI.",
   alternates: {
