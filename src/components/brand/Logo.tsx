@@ -76,7 +76,8 @@ export function Logo({
             alt="VOwn"
             width={currentSize.wordmark.width}
             height={currentSize.wordmark.height}
-            className="w-auto h-auto object-contain transition-opacity duration-200 group-hover:opacity-85 dark:brightness-0 dark:invert"
+            className="block h-auto max-w-full object-contain transition-opacity duration-200 group-hover:opacity-85 dark:brightness-0 dark:invert"
+            style={{ width: currentSize.wordmark.width, height: "auto" }}
             priority
           />
         </div>
