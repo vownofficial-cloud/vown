@@ -140,7 +140,7 @@ export default function HomePage() {
               <Button href="/contact" variant="primary" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
                 Let&apos;s Build Something
               </Button>
-              <Button href="/services" variant="secondary" size="lg">
+              <Button href="/#what-we-do" variant="secondary" size="lg">
                 Explore Services
               </Button>
             </div>
@@ -188,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. Services Overview */}
-      <section className="py-20 sm:py-24 bg-[#F8FAFC] dark:bg-[#090D16] border-b border-[#E2E8F0] dark:border-slate-800/80">
+      <section id="what-we-do" className="scroll-mt-20 sm:scroll-mt-24 py-20 sm:py-24 bg-[#F8FAFC] dark:bg-[#090D16] border-b border-[#E2E8F0] dark:border-slate-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <MotionWrap delay={0.1} direction="up" className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -276,14 +276,14 @@ export default function HomePage() {
       </section>
 
       {/* 3. Our Approach Spotlight */}
-      <section className="py-20 sm:py-24 bg-white dark:bg-[#0B0F17] border-b border-[#E2E8F0] dark:border-slate-800/80">
+      <section id="approach" className="scroll-mt-20 sm:scroll-mt-24 py-20 sm:py-24 bg-white dark:bg-[#0B0F17] border-b border-[#E2E8F0] dark:border-slate-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <MotionWrap delay={0.1} direction="up" className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="max-w-2xl">
               <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#64748B] dark:text-slate-400 mb-2">
                 <span className="w-2 h-2 rounded-full bg-[#334155] dark:bg-slate-300" />
-                How We Work
+                Our Approach
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] dark:text-white">
                 Clear thinking. Thoughtful building. Continuous improvement.
