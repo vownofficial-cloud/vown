@@ -30,8 +30,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://vown.site"),
   title: {
-    default: "VOwn · Technology That Moves You Forward",
-    template: "%s | VOwn",
+    default: "VOwn",
+    template: "%s",
   },
   description:
     "We automate repetitive work, connect your tools, and build websites that help your business grow. Practical AI automation and software integrations for businesses.",
