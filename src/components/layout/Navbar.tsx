@@ -16,6 +16,15 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [activeHash, setActiveHash] = useState("");
+
+  // Keep section navigation in sync when arriving from other pages or browser history.
+  useEffect(() => {
+    const syncHash = () => setActiveHash(window.location.hash);
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,8 +51,11 @@ export function Navbar() {
   }, [isMobileMenuOpen]);
 
   const isLinkActive = (href: string) => {
+    if (href.startsWith("/#")) {
+      return pathname === "/" && activeHash === href.slice(1);
+    }
     if (href === "/") {
-      return pathname === "/";
+      return pathname === "/" && !activeHash;
     }
     return pathname === href || pathname.startsWith(`${href}/`);
   };
@@ -72,6 +84,7 @@ export function Navbar() {
                   <Link
                     key={item.label}
                     href={item.href}
+                    onClick={() => setActiveHash(item.href.startsWith("/#") ? item.href.slice(1) : "")}
                     className={cn(
                       "whitespace-nowrap px-2.5 xl:px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-colors rounded-full",
                       active
@@ -149,7 +162,10 @@ export function Navbar() {
                     <Link
                       key={item.label}
                       href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setActiveHash(item.href.startsWith("/#") ? item.href.slice(1) : "");
+                      }}
                       className={cn(
                         "flex items-center justify-between p-3.5 rounded-xl border text-base transition-colors",
                         active
