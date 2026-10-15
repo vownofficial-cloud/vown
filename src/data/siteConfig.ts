@@ -18,12 +18,12 @@ export const siteConfig: SiteConfig = {
   name: "VOwn",
   domain: "vown.site",
   url: "https://vown.site",
-  title: "VOwn · Technology That Moves You Forward",
+  title: "VOwn · Better systems for better work",
   description:
-    "We automate repetitive work, connect your tools, and build websites that help your business grow.",
+    "We build automations, connect business tools, and create clear websites that make work easier.",
   contactEmail: "admin@vown.site",
   brandStatement:
-    "Less busywork. More possibilities. VOwn automates repetitive tasks, connects your business tools, and builds websites that help you grow.",
+    "Less workarounds. Better workflows. VOwn helps teams save time with practical automation, connected software, and thoughtful websites.",
   navItems: [
     { label: "Home", href: "/" },
     { label: "What We Do", href: "/#what-we-do" },
