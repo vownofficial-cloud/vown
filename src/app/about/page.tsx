@@ -5,7 +5,7 @@ import { ArrowUpRight, ShieldCheck, Cpu, Sparkles, HeartHandshake } from "lucide
 import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/MotionWrap";
 
 export const metadata: Metadata = {
-  title: "About VOwn — Practical AI Automation & Digital Systems for Growing Businesses",
+  title: "VOwn",
   description:
     "Learn about VOwn: our mission, values, and focus on building dependable AI workflow automations, software integrations, and modern websites for business growth.",
   alternates: {
