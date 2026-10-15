@@ -9,14 +9,14 @@ import { MotionWrap, StaggerContainer, StaggerItem } from "@/components/motion/M
 export const metadata: Metadata = {
   title: "VOwn",
   description:
-    "We automate repetitive work, connect your tools, and build websites that help your business grow. Free up your team's time with practical AI and modern digital solutions.",
+    "Practical AI automation, connected business tools, and thoughtful websites. VOwn helps teams simplify their day-to-day work.",
   alternates: {
     canonical: "https://vown.site",
   },
   openGraph: {
-    title: "VOwn · AI Automation, Business Software Integrations & Web Development",
+    title: "VOwn | Automation, Integrations & Website Development",
     description:
-      "We automate repetitive work, connect your tools, and build websites that help your business grow. Practical AI and software integrations for modern teams.",
+      "Spend less time on repetitive tasks. VOwn connects your tools, improves workflows, and builds websites that are easy to use.",
     url: "https://vown.site",
     siteName: "VOwn",
     images: [
@@ -42,7 +42,7 @@ export default function HomePage() {
         "@type": "Service",
         position: 1,
         name: "AI Automation",
-        description: "Replace repetitive copying, sorting, and manual paperwork with smart workflows that run in the background.",
+        description: "Make repetitive admin work easier with well-designed workflows that handle everyday steps automatically.",
         url: "https://vown.site/services#ai-automation",
         provider: {
           "@type": "Organization",
@@ -53,7 +53,7 @@ export default function HomePage() {
         "@type": "Service",
         position: 2,
         name: "Business Software Integrations",
-        description: "Link your CRM, payment tools, spreadsheets, and emails so customer information is always in sync.",
+        description: "Bring your forms, CRM, billing, and team tools together so information moves where it needs to.",
         url: "https://vown.site/services#business-integrations",
         provider: {
           "@type": "Organization",
@@ -64,7 +64,7 @@ export default function HomePage() {
         "@type": "Service",
         position: 3,
         name: "Website Development",
-        description: "Fast, clean websites engineered to load instantly, look sharp on mobile, and turn visitors into clients.",
+        description: "Build a clear, responsive website that explains what you offer and helps people reach you.",
         url: "https://vown.site/services#website-development",
         provider: {
           "@type": "Organization",
@@ -76,32 +76,32 @@ export default function HomePage() {
   const coreHooks = [
     {
       action: "Automate",
-      title: "Free up your time.",
-      description: "Replace repetitive copying, sorting, and manual paperwork with smart workflows that run in the background.",
+      title: "Let routine work run itself.",
+      description: "Make repetitive admin work easier with well-designed workflows that handle everyday steps automatically.",
       icon: BrainCircuit,
       href: "/services#ai-automation",
     },
     {
       action: "Connect",
-      title: "Make tools work together.",
-      description: "Link your CRM, payment tools, spreadsheets, and emails so customer information is always in sync.",
+      title: "Get your tools talking.",
+      description: "Bring your forms, CRM, billing, and team tools together so information moves where it needs to.",
       icon: Workflow,
       href: "/services#business-integrations",
     },
     {
       action: "Build",
-      title: "Create a stronger web presence.",
-      description: "Fast, clean websites engineered to load instantly, look sharp on mobile, and turn visitors into clients.",
+      title: "Make your website work harder.",
+      description: "Build a clear, responsive website that explains what you offer and helps people reach you.",
       icon: Layout,
       href: "/services#website-development",
     },
   ];
 
   const approachSteps = [
-    { step: "01", name: "Discover", icon: Compass, text: "Find where your team loses the most time." },
-    { step: "02", name: "Design", icon: PencilRuler, text: "Map out a simple, clear plan that makes sense." },
-    { step: "03", name: "Build", icon: Code2, text: "Engineer dependable solutions tested for real work." },
-    { step: "04", name: "Improve", icon: RefreshCw, text: "Launch smoothly and refine as your business grows." },
+    { step: "01", name: "Discover", icon: Compass, text: "Understand your workflow and find the steps worth improving." },
+    { step: "02", name: "Design", icon: PencilRuler, text: "Agree on a practical solution, scope, and plan." },
+    { step: "03", name: "Build", icon: Code2, text: "Create and test a solution around real use cases." },
+    { step: "04", name: "Improve", icon: RefreshCw, text: "Launch, learn from feedback, and keep improving." },
   ];
 
   return (
@@ -119,29 +119,29 @@ export default function HomePage() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#334155] dark:bg-slate-300" />
               <span className="text-xs font-semibold tracking-tight text-[#334155] dark:text-slate-200">
-                VOwn · Technology that moves you forward
+                VOwn · Less friction. Better flow.
               </span>
             </div>
 
             {/* Main Punchy Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-[1.08] mb-6">
-              Less busywork.
+              Make work simpler.
               <br />
-              <span className="text-[#334155] dark:text-slate-300">More possibilities.</span>
+              <span className="text-[#334155] dark:text-slate-300">Make room to grow.</span>
             </h1>
 
             {/* Clear, Customer-Focused Supporting Text */}
             <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto mb-8 text-balance">
-              We automate repetitive work, connect your tools, and build websites that help your business grow.
+              Your tools should make work easier, not add extra steps. We create smart workflows, connect the software you use, and build websites people enjoy using.
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
               <Button href="/contact" variant="primary" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
-                Let&apos;s Build Something
+                Talk About Your Project
               </Button>
               <Button href="/#what-we-do" variant="secondary" size="lg">
-                Explore Services
+                See What We Do
               </Button>
             </div>
           </MotionWrap>
@@ -175,7 +175,7 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-1 text-xs font-semibold text-[#334155] dark:text-slate-300 group-hover:text-[#0F172A] dark:group-hover:text-white">
-                      <span>Learn how</span>
+                      <span>Explore solution</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                     </div>
                   </Link>
@@ -198,14 +198,14 @@ export default function HomePage() {
                 What We Do
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] dark:text-white">
-                Practical solutions for real business needs.
+                Technology that solves everyday problems.
               </h2>
             </div>
             <Link
               href="/services"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0F172A] dark:text-white hover:text-[#334155] dark:hover:text-slate-300 transition-colors shrink-0 group"
             >
-              <span>See All Services &amp; Examples</span>
+              <span>Explore All Services</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </MotionWrap>
@@ -216,15 +216,15 @@ export default function HomePage() {
                 <div>
                   <div className="text-xs font-mono font-semibold text-[#94A3B8] dark:text-slate-500 mb-3">01 / AUTOMATION</div>
                   <h3 className="text-xl font-bold text-[#0F172A] dark:text-white tracking-tight mb-2">
-                    Give repetitive tasks less of your time.
+                    Spend less time on repeat tasks.
                   </h3>
                   <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed">
-                    Stop manually typing data from receipts, invoices, or customer forms. We set up smart systems that read, validate, and file records accurately.
+                    From forms to invoices, we design workflows that collect information, check important details, and move it to the right place.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
                   <Link href="/services#ai-automation" className="text-xs font-semibold text-[#334155] dark:text-slate-300 hover:underline inline-flex items-center gap-1">
-                    <span>See automation examples</span>
+                    <span>See automation in action</span>
                     <ArrowUpRight className="w-3 h-3" />
                   </Link>
                 </div>
@@ -236,15 +236,15 @@ export default function HomePage() {
                 <div>
                   <div className="text-xs font-mono font-semibold text-[#94A3B8] dark:text-slate-500 mb-3">02 / INTEGRATIONS</div>
                   <h3 className="text-xl font-bold text-[#0F172A] dark:text-white tracking-tight mb-2">
-                    Make your tools work better together.
+                    Keep important information in sync.
                   </h3>
                   <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed">
-                    When someone buys on your website or signs a contract, your CRM, invoice app, and team chat should update automatically. No missed handoffs.
+                    Connect your website, CRM, billing tools, and team updates to reduce copy-and-paste work and missed handoffs.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
                   <Link href="/services#business-integrations" className="text-xs font-semibold text-[#334155] dark:text-slate-300 hover:underline inline-flex items-center gap-1">
-                    <span>See integration examples</span>
+                    <span>Explore integrations</span>
                     <ArrowUpRight className="w-3 h-3" />
                   </Link>
                 </div>
@@ -256,15 +256,15 @@ export default function HomePage() {
                 <div>
                   <div className="text-xs font-mono font-semibold text-[#94A3B8] dark:text-slate-500 mb-3">03 / WEBSITES</div>
                   <h3 className="text-xl font-bold text-[#0F172A] dark:text-white tracking-tight mb-2">
-                    Turn your website into a real business asset.
+                    Turn visits into useful conversations.
                   </h3>
                   <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed">
-                    Clean layouts, clear explanations, and lightning-fast loading speeds on mobile. A website that clearly communicates your value and wins clients.
+                    Give people a website that loads smoothly, explains what you do, and makes it simple to take the next step.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
                   <Link href="/services#website-development" className="text-xs font-semibold text-[#334155] dark:text-slate-300 hover:underline inline-flex items-center gap-1">
-                    <span>See web examples</span>
+                    <span>Explore website solutions</span>
                     <ArrowUpRight className="w-3 h-3" />
                   </Link>
                 </div>
@@ -286,14 +286,14 @@ export default function HomePage() {
                 Our Approach
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] dark:text-white">
-                Clear thinking. Thoughtful building. Continuous improvement.
+                A straightforward path from idea to launch.
               </h2>
             </div>
             <Link
               href="/approach"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0F172A] dark:text-white hover:text-[#334155] dark:hover:text-slate-300 transition-colors shrink-0 group"
             >
-              <span>Read Our Full Process</span>
+              <span>See How We Work</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </MotionWrap>
@@ -332,14 +332,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <MotionWrap delay={0.15} direction="up" className="p-8 sm:p-14 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white text-center max-w-4xl mx-auto border border-transparent dark:border-slate-800 shadow-xl">
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
-              What&apos;s slowing you down? Let&apos;s fix it.
+              Tell us what you'd like to make easier.
             </h2>
             <p className="text-base sm:text-lg text-slate-300 dark:text-slate-300 max-w-xl mx-auto leading-relaxed mb-8">
-              Tell us what takes up too much time or where your software feels clunky. We&apos;ll show you how to streamline it.
+              Share the task, tool, or website you want to improve. We&apos;ll help you work out a practical next step.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
               <Button href="/contact" variant="white" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
-                Let&apos;s Build Something
+                Talk About Your Project
               </Button>
               <a
                 href={`mailto:${siteConfig.contactEmail}`}
