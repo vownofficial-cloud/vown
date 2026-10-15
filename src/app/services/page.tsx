@@ -8,14 +8,14 @@ import { MotionWrap } from "@/components/motion/MotionWrap";
 export const metadata: Metadata = {
   title: "VOwn",
   description:
-    "Explore VOwn's business technology services: smart AI workflow automation, cross-platform software integrations, and fast modern websites designed to eliminate busywork.",
+    "Explore practical AI automation, software integrations, and website development with VOwn. See what we can help you improve.",
   alternates: {
     canonical: "https://vown.site/services",
   },
   openGraph: {
-    title: "AI Automation, Business Integrations & Web Development Services | VOwn",
+    title: "VOwn Services | Automation, Integrations & Websites",
     description:
-      "Explore VOwn's business technology services: smart AI workflow automation, cross-platform software integrations, and fast modern websites designed to eliminate busywork.",
+      "Explore practical AI automation, software integrations, and website development with VOwn. See what we can help you improve.",
     url: "https://vown.site/services",
     siteName: "VOwn",
     images: [
@@ -37,116 +37,116 @@ export default function ServicesPage() {
       id: "ai-automation",
       number: "01",
       title: "AI Automation",
-      headline: "Give repetitive tasks less of your time.",
+      headline: "Take repeat work off your plate.",
       description:
-        "Every company loses hours each week to repetitive digital chores: copying form responses, re-typing invoice details, or manually sorting emails. We build reliable automations that take over routine tasks so your team can focus on what actually moves your business forward.",
+        "If your team spends too much time copying information, sorting requests, or preparing routine updates, we can help. We design workflows that handle repeatable steps while keeping people involved where decisions matter.",
       icon: BrainCircuit,
       examples: [
         {
           title: "Automatic Document Processing",
-          detail: "Read and extract invoice totals, receipt numbers, and vendor details automatically with zero manual typing.",
+          detail: "Capture key details from invoices and receipts, then review them before they reach your records.",
         },
         {
           title: "Smart Inquiry Routing",
-          detail: "Sort incoming customer questions and support emails directly to the right person or department instantly.",
+          detail: "Organize incoming questions and route them to the right person or inbox.",
         },
         {
           title: "Internal Knowledge Assistants",
-          detail: "Help your team get instant answers from company guidelines, operational manuals, and product documents.",
+          detail: "Help your team find useful information in approved internal guides and documents.",
         },
         {
           title: "Automated Daily Digests",
-          detail: "Receive a simple daily summary of sales, open tickets, or system milestones directly in your inbox.",
+          detail: "Bring key updates from the tools you use into one easy-to-read summary.",
         },
       ],
-      outcome: "Hours saved every week, fewer manual errors, and faster response times for your customers.",
+      outcome: "Less duplicate work, clearer handoffs, and more time for the tasks that need your attention.",
       contactParam: "ai-automation",
     },
     {
       id: "business-integrations",
       number: "02",
       title: "Business Integrations",
-      headline: "Make your tools work better together.",
+      headline: "Help your systems share the work.",
       description:
-        "You probably use different software for email, payments, invoicing, and customer records. When those tools don't talk to each other, you waste time copying data and fixing discrepancies. We connect your systems so information moves between them automatically in real time.",
+        "Your CRM, forms, billing platform, and team tools all hold useful information. We connect compatible systems using APIs or existing connectors so updates can move between them without constant manual copying.",
       icon: Workflow,
       examples: [
         {
           title: "CRM & Customer Sync",
-          detail: "When a new client signs up, their details automatically update across your CRM, email list, and project board.",
+          detail: "Keep customer details aligned across your CRM and other connected tools.",
         },
         {
           title: "Payment & Invoice Automations",
-          detail: "Connect Stripe or payment gateways to create invoices, record receipts, and update accounting records right away.",
+          detail: "Connect payment events with invoices or internal records where your tools support it.",
         },
         {
           title: "Instant Team Alerts",
-          detail: "Notify your team in Slack, Teams, or SMS immediately when high-priority sales leads or urgent issues arrive.",
+          detail: "Send useful alerts to your team when important events need attention.",
         },
         {
           title: "Spreadsheet & Database Connectors",
-          detail: "Keep Google Sheets and existing tools in sync with your live databases without forcing employees to change habits.",
+          detail: "Connect spreadsheets and databases so updates do not have to be entered twice.",
         },
       ],
-      outcome: "Zero duplicate data entry, no missed customer follow-ups, and records that are always up to date.",
+      outcome: "Fewer disconnected steps and a smoother flow of information across your business.",
       contactParam: "business-integrations",
     },
     {
       id: "website-development",
       number: "03",
       title: "Website Development",
-      headline: "Turn your online presence into a better business asset.",
+      headline: "Make a stronger first impression online.",
       description:
-        "Your website is often the first impression a potential client has of your business. If it loads slowly, looks cluttered on mobile, or makes it hard to understand what you do, visitors leave. We design clean, ultra-fast websites that clearly communicate your value and make contacting you effortless.",
+        "A useful website should explain what you do, work well on a phone, and make the next step obvious. We design clear, responsive websites with thoughtful content, simple navigation, and easy ways for visitors to contact you.",
       icon: Layout,
       examples: [
         {
-          title: "Fast Loading on Any Device",
-          detail: "Pages load in less than a second on mobile phones and desktop computers so visitors never bounce in frustration.",
+          title: "Designed for Real Devices",
+          detail: "Build with performance in mind and test the experience across mobile and desktop screens.",
         },
         {
-          title: "Clear, Compelling Messaging",
-          detail: "Clean typography and intuitive layout that explain what you do clearly within the first five seconds.",
+          title: "Messaging That Makes Sense",
+          detail: "Explain your services in plain language with a layout that is easy to follow.",
         },
         {
-          title: "Frictionless Contact & Booking",
-          detail: "Simple inquiry forms that route directly to your inbox, letting interested leads reach you in seconds.",
+          title: "Easy Ways to Get in Touch",
+          detail: "Give potential customers clear contact options and forms that are simple to complete.",
         },
         {
-          title: "Easy to Edit and Update",
-          detail: "Built on modern frameworks so you can quickly update text, add new offerings, or announce changes.",
+          title: "Content You Can Maintain",
+          detail: "Plan a structure that makes it easier to update your services and information later.",
         },
       ],
-      outcome: "A credible digital home that earns customer trust and turns visitors into new inquiries.",
+      outcome: "A clear, useful online home that helps visitors understand you and take the next step.",
       contactParam: "website-development",
     },
   ];
 
   const faqs = [
     {
-      question: "What kinds of business tasks can VOwn automate?",
+      question: "What kind of work can VOwn automate?",
       answer:
-        "We automate repetitive, rule-based operations such as document parsing (extracting invoice totals and receipts), customer inquiry routing, syncing client data across CRMs and spreadsheets, automated report generation, and sending instant internal alerts via Slack or Teams.",
+        "Good starting points include form processing, sorting messages, moving data between tools, preparing reports, and sending reminders. We look at how the task works today before suggesting automation.",
     },
     {
-      question: "Which software platforms and tools can you connect?",
+      question: "Can you connect the tools we already use?",
       answer:
-        "We build integrations across popular business systems including CRMs (HubSpot, Salesforce, Pipedrive), communication tools (Slack, Microsoft Teams, Gmail, WhatsApp Business), payment and accounting platforms (Stripe, QuickBooks), databases (PostgreSQL, Supabase, Airtable, Notion), and custom internal REST or GraphQL APIs.",
+        "Often, yes. We can assess CRMs, spreadsheets, messaging tools, payment platforms, databases, and custom software. The options depend on the APIs, access, and connectors each tool supports.",
     },
     {
-      question: "How does VOwn safeguard our company's data and privacy?",
+      question: "How do you handle access and sensitive information?",
       answer:
-        "We follow industry security standards: least-privilege API scoping, encrypted credential storage in isolated environments, and zero sharing of proprietary client data for public AI model training. Your data remains completely within your secure ecosystem.",
+        "We discuss data access before connecting systems, plan for limited permissions, and agree on how credentials and sensitive information will be handled. Any third-party services are part of that discussion.",
     },
     {
-      question: "How long does a typical automation or website build take?",
+      question: "How long does a project usually take?",
       answer:
-        "Targeted workflow automations and integrations typically deploy within 1 to 2 weeks. Custom website development projects generally take 2 to 4 weeks depending on scope, design requirements, and content readiness.",
+        "It depends on the scope, the tools involved, and how ready your content or data is. After understanding the project, we can suggest a clear plan and realistic timeline.",
     },
     {
-      question: "Will our staff need technical training to use these solutions?",
+      question: "Will our team be able to use the result?",
       answer:
-        "No specialized technical training is required. We deliberately engineer solutions to work natively inside the tools your team already relies on every day (such as email, spreadsheets, or chat). We also provide complete documentation and a personalized walkthrough.",
+        "Ease of use is part of the plan. We aim to fit the solution into the way your team already works and explain how to use and maintain it at handover.",
     },
   ];
 
@@ -201,12 +201,12 @@ export default function ServicesPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            The right tools.
+            Less friction.
             <br />
-            <span className="text-[#334155] dark:text-slate-300">Working smarter together.</span>
+            <span className="text-[#334155] dark:text-slate-300">Better ways to work.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            We solve the everyday digital friction that holds businesses back. Here is exactly what we build and how it helps you.
+            Start with the work that slows you down. We will help you find a better way to do it.
           </p>
         </MotionWrap>
 
@@ -254,7 +254,7 @@ export default function ServicesPage() {
                       className="shrink-0 self-start md:self-auto"
                       icon={<ArrowUpRight className="w-3.5 h-3.5" />}
                     >
-                      Ask About This Service
+                      Discuss This Service
                     </Button>
                   </div>
 
@@ -268,7 +268,7 @@ export default function ServicesPage() {
                   {/* Practical Examples */}
                   <div className="pt-8">
                     <div className="text-xs font-mono uppercase tracking-wider text-[#94A3B8] dark:text-slate-500 mb-6">
-                      Everyday Examples &amp; Solutions
+                      Where This Can Help
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {service.examples.map((item) => (
@@ -292,14 +292,14 @@ export default function ServicesPage() {
                     {/* Practical Outcome Box */}
                     <div className="mt-8 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
                       <div>
-                        <span className="font-semibold text-[#0F172A] dark:text-white">Practical Outcome: </span>
+                        <span className="font-semibold text-[#0F172A] dark:text-white">The Goal: </span>
                         <span className="text-[#475569] dark:text-slate-300">{service.outcome}</span>
                       </div>
                       <Link
                         href={`/contact?service=${service.contactParam}`}
                         className="font-semibold text-[#0F172A] dark:text-white hover:underline inline-flex items-center gap-1 shrink-0"
                       >
-                        <span>Discuss your setup</span>
+                        <span>Tell Us About Your Setup</span>
                         <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
@@ -320,10 +320,10 @@ export default function ServicesPage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight mb-4">
-              Clear answers to common questions.
+              Good questions deserve clear answers.
             </h2>
             <p className="text-base text-[#64748B] dark:text-slate-400">
-              Everything you need to know about our automation, software integration, and web development services.
+              A few things worth knowing before you start a project with VOwn.
             </p>
           </div>
 
@@ -351,14 +351,14 @@ export default function ServicesPage() {
         <MotionWrap delay={0.15} direction="up" className="mt-16 sm:mt-24 p-8 sm:p-12 rounded-3xl bg-[#0F172A] dark:bg-[#111827] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-transparent dark:border-slate-800 shadow-xl">
           <div className="max-w-xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-white">
-              Not sure which service you need first?
+              Not sure where to start?
             </h3>
             <p className="text-sm text-slate-300 dark:text-slate-300 leading-relaxed">
-              Tell us about your current day-to-day workflow. We&apos;ll give you an honest recommendation on the easiest place to start saving time.
+              Tell us what feels slow, messy, or difficult. We&apos;ll help you identify a useful first step.
             </p>
           </div>
           <Button href="/contact" variant="white" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
-            Start a Conversation
+            Tell Us What You Need
           </Button>
         </MotionWrap>
 
