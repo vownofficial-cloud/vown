@@ -112,7 +112,7 @@ function ContactFormContent() {
 
       if (data.status === "delivered") {
         setStatus("delivered");
-        setFeedbackMessage("Thank you! Your message has been sent directly to admin@vown.site.");
+        setFeedbackMessage("Thanks for reaching out. Your message has been sent to admin@vown.site.");
         setFormData({
           name: "",
           email: "",
@@ -122,7 +122,7 @@ function ContactFormContent() {
       } else {
         setStatus("dev_mode");
         setFeedbackMessage(
-          "Your message is ready. Click below to send it directly to admin@vown.site using your email app."
+          "The form cannot send email right now. Use the button below to send your message from your email app."
         );
         setMailtoFallback(data.data?.mailtoFallback || buildMailtoUrl());
       }
@@ -147,13 +147,13 @@ function ContactFormContent() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-tight mb-6">
-            What&apos;s slowing you down?
+            Have something in mind?
             <br />
-            <span className="text-[#334155] dark:text-slate-300">Let&apos;s fix it.</span>
+            <span className="text-[#334155] dark:text-slate-300">Let&apos;s talk it through.</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748B] dark:text-slate-300 leading-relaxed">
-            Tell us about a workflow bottleneck, tools you want to connect, or a website project.
-            We read every inquiry directly and reply with practical advice.
+            Tell us what you would like to automate, connect, or build.
+            A few details are enough to start a useful conversation.
           </p>
         </MotionWrap>
 
@@ -168,14 +168,14 @@ function ContactFormContent() {
               </div>
 
               <div className="text-xs uppercase font-mono tracking-wider text-[#64748B] dark:text-slate-400 mb-1">
-                Direct Email
+                Prefer Email?
               </div>
               <div className="text-xl font-bold text-[#0F172A] dark:text-white font-mono break-all mb-4">
                 {siteConfig.contactEmail}
               </div>
 
               <p className="text-sm text-[#475569] dark:text-slate-300 leading-relaxed mb-6">
-                Prefer email? Drop us a line directly. Whether you have a concrete project ready to build or just want to explore what&apos;s possible, we&apos;re glad to chat.
+                Write to us directly if that is easier. A rough idea is fine; you do not need a finished project brief to get started.
               </p>
 
               {/* Action Buttons */}
@@ -212,7 +212,7 @@ function ContactFormContent() {
             <div className="p-6 rounded-2xl bg-white/70 dark:bg-[#111827]/70 border border-[#E2E8F0] dark:border-slate-800 flex items-start gap-3">
               <Clock className="w-5 h-5 text-[#334155] dark:text-slate-300 shrink-0 mt-0.5" />
               <div className="text-xs text-[#475569] dark:text-slate-300 leading-relaxed">
-                <span className="font-semibold text-[#0F172A] dark:text-white">Quick response.</span> All emails sent to <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span> are read directly by our team. We usually respond within one business day.
+                <span className="font-semibold text-[#0F172A] dark:text-white">A thoughtful reply.</span> Send your note to <span className="font-mono text-[#0F172A] dark:text-white">admin@vown.site</span>. We&apos;ll review it and follow up with useful questions or next steps.
               </div>
             </div>
           </MotionWrap>
@@ -222,10 +222,10 @@ function ContactFormContent() {
             <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-sm">
               
               <h2 className="text-2xl font-bold text-[#0F172A] dark:text-white tracking-tight mb-2">
-                Send a Quick Note
+                Tell Us About Your Project
               </h2>
               <p className="text-xs sm:text-sm text-[#64748B] dark:text-slate-400 mb-8">
-                Share a few details below and we will get back to you promptly.
+                No technical brief needed. Just tell us what you want to improve.
               </p>
 
               {/* Status Notifications */}
@@ -245,7 +245,7 @@ function ContactFormContent() {
                 <div className="mb-6 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-sm">
                   <div className="flex items-center gap-2 font-semibold mb-1">
                     <Info className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
-                    <span>Inquiry Ready</span>
+                    <span>One More Step to Send</span>
                   </div>
                   <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed mb-3">
                     {feedbackMessage}
@@ -256,7 +256,7 @@ function ContactFormContent() {
                       className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0F172A] dark:bg-white text-white dark:text-[#0F172A] font-medium text-xs hover:bg-[#1E293B] dark:hover:bg-slate-100 transition-colors"
                     >
                       <Send className="w-3.5 h-3.5" />
-                      <span>Click to Send via Your Email App</span>
+                      <span>Open Email App to Send</span>
                     </a>
                   )}
                 </div>
@@ -282,7 +282,7 @@ function ContactFormContent() {
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
-                    Your Name <span className="text-rose-500">*</span>
+                    Name <span className="text-rose-500">*</span>
                   </label>
                   <input
                     id="name"
@@ -304,7 +304,7 @@ function ContactFormContent() {
                 {/* Email Field */}
                 <div>
                   <label htmlFor="email" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
-                    Your Email <span className="text-rose-500">*</span>
+                    Email Address <span className="text-rose-500">*</span>
                   </label>
                   <input
                     id="email"
@@ -326,7 +326,7 @@ function ContactFormContent() {
                 {/* Area of Interest */}
                 <div>
                   <label htmlFor="service" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
-                    What can we help you with?
+                    What do you need help with?
                   </label>
                   <select
                     id="service"
@@ -344,7 +344,7 @@ function ContactFormContent() {
                 {/* Project Details */}
                 <div>
                   <label htmlFor="message" className="block text-xs font-semibold text-[#0F172A] dark:text-slate-200 mb-1.5">
-                    What are you looking to do? <span className="text-rose-500">*</span>
+                    What would you like to improve? <span className="text-rose-500">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -355,7 +355,7 @@ function ContactFormContent() {
                       setFormData({ ...formData, message: e.target.value });
                       if (formErrors.message) setFormErrors({ ...formErrors, message: "" });
                     }}
-                    placeholder="Tell us what you're working on, what feels slow, or what you'd like to build..."
+                    placeholder="A quick description of the challenge, tools involved, or website you have in mind..."
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-[#E2E8F0] dark:border-slate-800 text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#0B0F17] focus:outline-hidden focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-slate-400 focus:border-transparent transition-all resize-y"
                   />
                   {formErrors.message && (
@@ -373,7 +373,7 @@ function ContactFormContent() {
                     className="w-full sm:flex-1 justify-center"
                     icon={<Send className="w-4 h-4" />}
                   >
-                    {status === "loading" ? "Sending..." : "Send Message"}
+                    {status === "loading" ? "Sending..." : "Send My Enquiry"}
                   </Button>
 
                   <a
@@ -386,7 +386,7 @@ function ContactFormContent() {
                 </div>
 
                 <div className="text-[11px] text-[#94A3B8] dark:text-slate-500 text-center pt-2">
-                  Delivered directly to{" "}
+                  For enquiries, write to{" "}
                   <span className="font-mono text-[#64748B] dark:text-slate-400">admin@vown.site</span>.
                 </div>
               </form>
@@ -406,7 +406,7 @@ export default function ContactPage() {
     <Suspense
       fallback={
         <div className="py-28 text-center text-sm font-mono text-[#64748B] dark:text-slate-400">
-          Loading contact page...
+          Opening contact form...
         </div>
       }
     >
