@@ -35,11 +35,10 @@ export function Navbar() {
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    if (!isMobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
   }, [isMobileMenuOpen]);
 
   const isLinkActive = (href: string) => {
@@ -55,18 +54,18 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-40 transition-all duration-200 border-b backdrop-blur-md",
           "bg-[#F8FAFC]/95 dark:bg-[#090D16]/95 border-[#E2E8F0]/80 dark:border-slate-800/80",
-          isScrolled ? "py-3 shadow-xs" : "py-4 sm:py-5"
+          isScrolled ? "py-2.5 sm:py-3 shadow-xs" : "py-3 sm:py-4"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex min-h-10 items-center justify-between gap-3">
             {/* Brand Logo */}
-            <div className="flex items-center">
+            <div className="flex shrink-0 items-center">
               <Logo variant="wordmark" size="md" href="/" showDomainBadge />
             </div>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center gap-1 px-3 py-1.5 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs">
+            <nav className="hidden lg:flex min-w-0 items-center gap-0.5 xl:gap-1 px-2 xl:px-3 py-1.5 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs">
               {siteConfig.navItems.map((item) => {
                 const active = isLinkActive(item.href);
                 return (
@@ -74,7 +73,7 @@ export function Navbar() {
                     key={item.label}
                     href={item.href}
                     className={cn(
-                      "px-3.5 py-1.5 text-xs lg:text-sm font-medium transition-colors rounded-full",
+                      "whitespace-nowrap px-2.5 xl:px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-colors rounded-full",
                       active
                         ? "text-[#0F172A] dark:text-white bg-slate-100 dark:bg-slate-800 font-semibold"
                         : "text-[#64748B] dark:text-slate-400 hover:text-[#0F172A] dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50"
@@ -88,7 +87,7 @@ export function Navbar() {
             </nav>
 
             {/* Right side CTAs: Theme Toggle + Let's Talk Button */}
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex shrink-0 items-center gap-2 xl:gap-3">
               <ThemeToggle />
               <Button
                 href="/contact"
@@ -101,7 +100,7 @@ export function Navbar() {
             </div>
 
             {/* Mobile Menu Actions */}
-            <div className="flex md:hidden items-center gap-2">
+            <div className="flex lg:hidden shrink-0 items-center gap-2">
               <ThemeToggle />
               <Button
                 href="/contact"
@@ -136,7 +135,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed inset-0 z-40 bg-[#F8FAFC]/98 dark:bg-[#090D16]/98 backdrop-blur-xl pt-24 px-6 pb-8 md:hidden flex flex-col justify-between"
+            className="fixed inset-0 z-40 bg-[#F8FAFC]/98 dark:bg-[#090D16]/98 backdrop-blur-xl pt-24 px-6 pb-8 lg:hidden flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between text-[11px] uppercase font-mono tracking-wider text-[#94A3B8] px-1 mb-2">
