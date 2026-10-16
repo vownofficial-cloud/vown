@@ -2,33 +2,19 @@ export interface NavItem {
   label: string;
   href: string;
 }
-
-export interface SiteConfig {
-  name: string;
-  domain: string;
-  url: string;
-  title: string;
-  description: string;
-  contactEmail: string;
-  navItems: NavItem[];
-  brandStatement: string;
-}
-
-export const siteConfig: SiteConfig = {
+export const siteConfig = {
   name: "VOwn",
   domain: "vown.site",
   url: "https://vown.site",
-  title: "VOwn · Your workday, upgraded",
+  title: "VOwn | Website Home",
   description:
-    "Smart automations, connected tools, and websites made for real people. Less hassle, more momentum.",
+    "We build websites, connect your apps, and help you stop doing the same tasks by hand.",
   contactEmail: "admin@vown.site",
-  brandStatement:
-    "Your time matters. We build helpful automations, bring your tools together, and make websites that work beautifully.",
+  brandStatement: "Websites, connected tools, and a little less manual work.",
   navItems: [
     { label: "Home", href: "/" },
-    { label: "What We Do", href: "/#what-we-do" },
-    { label: "Approach", href: "/#approach" },
+    { label: "Products", href: "/products" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
-  ],
+  ] as NavItem[],
 };

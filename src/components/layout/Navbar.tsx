@@ -1,217 +1,86 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRef, useState } from "react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { Logo } from "@/components/brand/Logo";
-import { Button } from "@/components/ui/Button";
-import { ThemeToggle } from "@/components/theme/ThemeToggle";
-import { ScrollProgress } from "@/components/layout/ScrollProgress";
-import { Menu, X, ArrowUpRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  // Keep the homepage sections accessible without listing them in the header menu.
-  const headerNavItems = siteConfig.navItems.filter(
-    (item) => item.label !== "What We Do" && item.label !== "Approach"
-  );
-  const [activeHash, setActiveHash] = useState("");
+  const [open, setOpen] = useState(false);
+  const toggle = useRef<HTMLButtonElement>(null);
 
-  // Keep section navigation in sync when arriving from other pages or browser history.
-  useEffect(() => {
-    const syncHash = () => setActiveHash(window.location.hash);
-    syncHash();
-    window.addEventListener("hashchange", syncHash);
-    return () => window.removeEventListener("hashchange", syncHash);
-  }, [pathname]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 16);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Close mobile menu on route change
-  const [prevPathname, setPrevPathname] = useState(pathname);
-  if (prevPathname !== pathname) {
-    setPrevPathname(pathname);
-    setIsMobileMenuOpen(false);
-  }
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (!isMobileMenuOpen) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = previousOverflow; };
-  }, [isMobileMenuOpen]);
-
-  const isLinkActive = (href: string) => {
-    if (href.startsWith("/#")) {
-      return pathname === "/" && activeHash === href.slice(1);
-    }
+  const handleNavClick = (href: string, e: React.MouseEvent) => {
+    setOpen(false);
     if (href === "/") {
-      return pathname === "/" && !activeHash;
+      if (pathname === "/") {
+        e.preventDefault();
+      }
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }
-    return pathname === href || pathname.startsWith(`${href}/`);
   };
 
   return (
-    <>
-      <header
-        className={cn(
-          "fixed top-0 left-0 right-0 z-40 transition-all duration-200 border-b backdrop-blur-md",
-          "bg-[#F8FAFC]/95 dark:bg-[#090D16]/95 border-[#E2E8F0]/80 dark:border-slate-800/80",
-          isScrolled ? "py-2.5 sm:py-3 shadow-xs" : "py-3 sm:py-4"
-        )}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex min-h-10 items-center justify-between gap-3">
-            {/* Brand Logo */}
-            <div className="flex shrink-0 items-center">
-              <Logo variant="wordmark" size="md" href="/" showDomainBadge />
-            </div>
-
-            {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex min-w-0 items-center gap-0.5 xl:gap-1 px-2 xl:px-3 py-1.5 rounded-full bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-slate-800 shadow-2xs">
-              {headerNavItems.map((item) => {
-                const active = isLinkActive(item.href);
-                return (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setActiveHash(item.href.startsWith("/#") ? item.href.slice(1) : "")}
-                    className={cn(
-                      "whitespace-nowrap px-2.5 xl:px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-colors rounded-full",
-                      active
-                        ? "text-[#0F172A] dark:text-white bg-slate-100 dark:bg-slate-800 font-semibold"
-                        : "text-[#64748B] dark:text-slate-400 hover:text-[#0F172A] dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50"
-                    )}
-                    aria-current={active ? "page" : undefined}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            {/* Right side CTAs: Theme Toggle + Let's Talk Button */}
-            <div className="hidden lg:flex shrink-0 items-center gap-2 xl:gap-3">
-              <ThemeToggle />
-              <Button
-                href="/contact"
-                variant="primary"
-                size="sm"
-                icon={<ArrowUpRight className="w-3.5 h-3.5" />}
-              >
-                Let&apos;s Talk
-              </Button>
-            </div>
-
-            {/* Mobile Menu Actions */}
-            <div className="flex lg:hidden shrink-0 items-center gap-2">
-              <ThemeToggle />
-              <Button
-                href="/contact"
-                variant="primary"
-                size="sm"
-                className="text-xs px-3 py-1.5"
-              >
-                Talk
-              </Button>
-              <button
-                type="button"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-xl text-[#334155] dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-[#E2E8F0] dark:border-slate-700"
-                aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-                aria-expanded={isMobileMenuOpen}
-              >
-                {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Reading progress bar fixed directly below navigation bar */}
-        <ScrollProgress />
-      </header>
-
-      {/* Mobile Drawer Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed inset-0 z-40 bg-[#F8FAFC]/98 dark:bg-[#090D16]/98 backdrop-blur-xl pt-24 px-6 pb-8 lg:hidden flex flex-col justify-between"
-          >
-            <div className="space-y-3">
-              <div className="flex items-center justify-between text-[11px] uppercase font-mono tracking-wider text-[#94A3B8] px-1 mb-2">
-                <span>Menu</span>
-                <span>vown.site</span>
-              </div>
-              <div className="flex flex-col space-y-1.5">
-                {headerNavItems.map((item) => {
-                  const active = isLinkActive(item.href);
-                  return (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setActiveHash(item.href.startsWith("/#") ? item.href.slice(1) : "");
-                      }}
-                      className={cn(
-                        "flex items-center justify-between p-3.5 rounded-xl border text-base transition-colors",
-                        active
-                          ? "bg-[#0F172A] dark:bg-white text-white dark:text-[#0F172A] border-[#0F172A] dark:border-white font-semibold"
-                          : "bg-white dark:bg-[#111827] text-[#0F172A] dark:text-slate-200 border-[#E2E8F0] dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium"
-                      )}
-                      aria-current={active ? "page" : undefined}
-                    >
-                      <span>{item.label}</span>
-                      <ArrowUpRight
-                        className={cn("w-4 h-4", active ? "opacity-80" : "text-[#64748B] dark:text-slate-400")}
-                      />
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Mobile Drawer Footer */}
-            <div className="space-y-3 pt-6 border-t border-[#E2E8F0] dark:border-slate-800">
-              <Button
-                href="/contact"
-                variant="primary"
-                size="lg"
-                className="w-full justify-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Start a Conversation
-              </Button>
-              <div className="text-center text-xs text-[#64748B] dark:text-slate-400">
-                Direct email:{" "}
-                <a
-                  href="mailto:admin@vown.site"
-                  className="text-[#0F172A] dark:text-white font-mono hover:underline"
-                >
-                  admin@vown.site
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+    <header
+      className="site-header"
+      onKeyDown={(e) => {
+        if (e.key === "Escape") {
+          setOpen(false);
+          toggle.current?.focus();
+        }
+      }}
+    >
+      <div className="shell header-inner">
+        <Logo />
+        <nav className="desktop-nav" aria-label="Main navigation">
+          {siteConfig.navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              scroll={true}
+              onClick={(e) => handleNavClick(item.href, e)}
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+        <Link className="header-contact" href="/contact">
+          Say hello <ArrowUpRight size={17} />
+        </Link>
+        <button
+          className="menu-toggle"
+          ref={toggle}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X /> : <Menu />}
+        </button>
+      </div>
+      {open && (
+        <nav
+          id="mobile-navigation"
+          className="mobile-nav shell"
+          aria-label="Mobile navigation"
+        >
+          {siteConfig.navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              scroll={true}
+              onClick={(e) => handleNavClick(item.href, e)}
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
+              {item.label}
+              <ArrowUpRight size={20} />
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
   );
 }

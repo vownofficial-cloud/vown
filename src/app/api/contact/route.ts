@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { addMessage } from "@/lib/messagesStore";
 
 interface ContactPayload {
   name: string;
@@ -28,70 +29,31 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!message || message.trim().length < 10) {
+    if (!message || message.trim().length < 5) {
       return NextResponse.json(
-        { error: "Please provide a brief message describing your project (at least 10 characters)." },
+        { error: "Please provide a brief message (at least 5 characters)." },
         { status: 400 }
       );
     }
 
-    // Backend dispatch check
-    // If a service like Resend or SendGrid is configured via environment variable:
-    const resendApiKey = process.env.RESEND_API_KEY;
-    const isBackendConfigured = Boolean(resendApiKey);
+    // Save directly to Supabase database (or local store during setup)
+    const result = await addMessage({
+      name,
+      email,
+      service: service || "General Inquiry",
+      message,
+    });
 
-    if (isBackendConfigured) {
-      // If RESEND_API_KEY is present, send using Resend API:
-      try {
-        const res = await fetch("https://api.resend.com/emails", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${resendApiKey}`,
-          },
-          body: JSON.stringify({
-            from: "VOwn Website <contact@vown.site>",
-            to: ["admin@vown.site"],
-            reply_to: email,
-            subject: `[VOwn Inquiry] New message from ${name} (${service || "General"})`,
-            text: `Name: ${name}\nEmail: ${email}\nService: ${service || "General"}\n\nMessage:\n${message}`,
-          }),
-        });
-
-        if (!res.ok) {
-          throw new Error(`Resend API returned status ${res.status}`);
-        }
-
-        return NextResponse.json({
-          success: true,
-          status: "delivered",
-          message: "Thanks for reaching out. Your message has been sent to admin@vown.site.",
-        });
-      } catch (sendErr) {
-        console.error("Failed to send via Resend:", sendErr);
-        // Offer an email-app fallback without claiming delivery.
-      }
-    }
-
-    // Email is not configured or sending failed: offer a mailto fallback.
     return NextResponse.json({
       success: true,
-      status: "dev_received",
-      message:
-        "Email delivery is not available through this form right now. Please use your email app to send the prepared message.",
-      data: {
-        name,
-        email,
-        service: service || "General",
-        mailtoFallback: `mailto:admin@vown.site?subject=${encodeURIComponent(
-          `Inquiry from ${name} - ${service || "VOwn"}`
-        )}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`,
-      },
+      status: "delivered",
+      storage: result.isSupabase ? "supabase" : "local",
+      message: "Your message has been sent. We will reply to the email address you gave us.",
     });
   } catch (error) {
     console.error("Contact API Error:", error);
     return NextResponse.json(
-      { error: "An unexpected error occurred while processing your message. Please email admin@vown.site directly." },
+      { error: "An unexpected error occurred while processing your message." },
       { status: 500 }
     );
   }

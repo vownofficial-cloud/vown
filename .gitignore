@@ -43,3 +43,14 @@ next-env.d.ts
 # cloudflare / opennext
 /.open-next/
 /.wrangler/
+
+# local fallback data
+/.data/
+
+# Hidden for GitHub only (preserved in local project)
+src/app/products/
+src/app/about/
+
+# Scratch planning docs
+CONTENT-PLAN.md
+WEBSITE-DESIGN-PLAN.md

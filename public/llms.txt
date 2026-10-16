@@ -1,57 +1,16 @@
-# VOwn (vown.site)
+# VOwn
 
-> VOwn is a modern technology studio specializing in AI automation for businesses, software tool integrations, and custom website development.
+> VOwn builds websites, connects business tools, and helps reduce repeat manual tasks. It also develops its own products.
 
-## Overview
-VOwn helps businesses eliminate repetitive manual busywork by connecting software tools, building intelligent automated workflows, and engineering fast, responsive modern websites.
+## Pages
 
-- **Website**: https://vown.site
-- **Contact Email**: admin@vown.site
-- **Primary Domain**: vown.site
+- [Home](https://vown.site/): What VOwn builds and how to get in touch.
+- [Products](https://vown.site/products): Software tools and product initiatives taking shape at VOwn (Automation Hub, Web Foundations, Operations Engine).
+- [About](https://vown.site/about): An introduction to VOwn, our mission, and our 3-step approach to making everyday work easier.
+- [Contact](https://vown.site/contact): Project enquiries, product questions, and collaboration.
 
-## Core Services
+## Contact
 
-### 1. AI Automation
-Automating repetitive administrative and operational workflows to save time and reduce manual errors.
-- **URL**: https://vown.site/services#ai-automation
-- **Key Capabilities**:
-  - Automated document processing (invoice parsing, receipts, text extraction)
-  - Smart inquiry routing and customer message classification
-  - Internal knowledge assistants grounded in company documents
-  - Automated daily business summaries and milestone alerts
+Email: admin@vown.site
 
-### 2. Business Software Integrations
-Connecting disconnected software stacks so data synchronizes seamlessly across tools.
-- **URL**: https://vown.site/services#business-integrations
-- **Key Capabilities**:
-  - CRM and customer database synchronization (HubSpot, Salesforce, Pipedrive)
-  - Payment and automated invoicing workflows (Stripe, QuickBooks)
-  - Real-time team notifications (Slack, Microsoft Teams, WhatsApp)
-  - Spreadsheet, database, and cloud API connectors (PostgreSQL, Supabase, Notion, Airtable)
-
-### 3. Website Development
-Building fast, clean, high-performance websites engineered for modern businesses.
-- **URL**: https://vown.site/services#website-development
-- **Key Capabilities**:
-  - Sub-second loading speeds optimized for Core Web Vitals
-  - Responsive mobile-first design
-  - Clear, human-centered messaging that turns visitors into clients
-  - Frictionless inquiry forms and booking links
-
-## Working Approach
-VOwn follows a transparent 4-phase methodology:
-1. **Discover**: Identify repetitive bottlenecks and map the client's current software stack.
-2. **Design**: Plan visual layouts and data flow maps in plain English before writing code.
-3. **Build**: Engineer reliable solutions with modern, tested tools and rigorous testing.
-4. **Improve**: Launch smoothly, walk the client through the system, and provide ongoing iteration.
-- **URL**: https://vown.site/approach
-
-## Company Philosophy & Values
-- **Utility Over Hype**: Focusing on real time savings and business utility rather than buzzwords.
-- **Client Ownership**: Clients own 100% of their code, credentials, and digital assets.
-- **Direct Collaboration**: Clients communicate directly with designers and builders.
-- **URL**: https://vown.site/about
-
-## Getting in Touch
-- **Inquiry Page**: https://vown.site/contact
-- **Direct Email**: admin@vown.site
+Costs, timelines, and tool compatibility depend on the project and should be discussed directly.

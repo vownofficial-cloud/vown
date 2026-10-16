@@ -1,70 +1,14 @@
 import type { Metadata } from "next";
-import React from "react";
-
 export const metadata: Metadata = {
-  title: "VOwn",
+  title: "Contact | VOwn",
   description:
-    "Big idea or small headache? Tell VOwn what you'd like to automate, connect, or build.",
-  alternates: {
-    canonical: "https://vown.site/contact",
-  },
-  openGraph: {
-    title: "Contact VOwn | Let's Talk About Your Idea",
-    description:
-      "Got an idea? Start a conversation with VOwn about automation, connected tools, or websites.",
-    url: "https://vown.site/contact",
-    siteName: "VOwn",
-    images: [
-      {
-        url: "/brand/vown-primary-logo.png",
-        width: 1254,
-        height: 1254,
-        alt: "VOwn Logo",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact VOwn | Let's Talk About Your Idea",
-    description:
-      "Got an idea? Start a conversation with VOwn about automation, connected tools, or websites.",
-    images: ["/brand/vown-primary-logo.png"],
-  },
+    "Tell us about a website, a task you want to automate, or a question about a VOwn product.",
+  alternates: { canonical: "/contact" },
 };
-
 export default function ContactLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://vown.site",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Contact",
-        item: "https://vown.site/contact",
-      },
-    ],
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      {children}
-    </>
-  );
+  return children;
 }

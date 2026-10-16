@@ -1,68 +1,54 @@
 export interface VentureItem {
   id: string;
   name: string;
-  category: "City Initiatives" | "Digital Products" | "Software Tools" | "Media & Content";
+  category: "Digital Products" | "Software Tools" | "Automation";
   tagline: string;
   description: string;
   status: "Active" | "Coming Soon" | "In Development";
-  handle?: string;
-  // External link is only enabled when verified live
-  externalLink?: {
-    label: string;
-    url: string;
-    isLive: boolean;
-  };
   highlights: string[];
 }
 
 export const venturesData: VentureItem[] = [
   {
-    id: "chennai-vown",
-    name: "Chennai VOwn",
-    category: "City Initiatives",
-    tagline: "Local updates, community stories, and city guides for Chennai",
+    id: "automation-hub",
+    name: "VOwn Automation Hub",
+    category: "Automation",
+    tagline: "Background automations connecting business forms, spreadsheets, and alerts",
     description:
-      "A dedicated initiative delivering Chennai-focused updates, useful local information, community stories, and city-related content. Built to keep residents and visitors connected to what is happening across the city.",
-    status: "Coming Soon",
-    handle: "@chennai_vown.site",
-    externalLink: {
-      label: "Follow on Instagram",
-      url: "https://www.instagram.com/chennai_vown.site/",
-      isLive: true,
-    },
+      "A purpose-built suite of automations that move information between forms, spreadsheets, and databases without manual copying.",
+    status: "Active",
     highlights: [
-      "Curated city updates & neighborhood highlights",
-      "Useful local guides & transit information",
-      "Community stories & cultural features",
-      "Official handle: @chennai_vown.site",
+      "Instant notification triggers",
+      "Spreadsheet and database syncing",
+      "Zero manual data entry",
     ],
   },
   {
-    id: "future-city-initiatives",
-    name: "Future City Initiatives",
-    category: "City Initiatives",
-    tagline: "Expanding local digital hubs to new regions",
+    id: "web-foundations",
+    name: "VOwn Web Foundations",
+    category: "Digital Products",
+    tagline: "High-performance websites engineered for clear communication and enquiry conversion",
     description:
-      "Following the launch of Chennai VOwn, we plan to bring the same community-first approach and local information guides to additional cities.",
-    status: "In Development",
+      "Ultra-fast web platforms with responsive architecture, accessible navigation, and straightforward contact flows.",
+    status: "Active",
     highlights: [
-      "Replicable hyperlocal information framework",
-      "Community-driven updates and verified local resources",
-      "Expansion roadmap driven by community interest",
+      "Ultra-fast loading speed",
+      "Mobile-optimized layouts",
+      "Integrated lead capture flows",
     ],
   },
   {
-    id: "digital-tools",
-    name: "Digital Products & Tools",
+    id: "operations-engine",
+    name: "VOwn Operations Engine",
     category: "Software Tools",
-    tagline: "Purpose-built utilities designed to solve common business bottlenecks",
+    tagline: "Tailored internal tools and focused operational dashboards",
     description:
-      "VOwn incubates focused web utilities and automation tools created to simplify everyday operational workflows.",
+      "Lightweight internal tools designed to replace chaotic spreadsheets with clean, unified operational workflows.",
     status: "In Development",
     highlights: [
-      "Lightweight workflow utilities",
-      "Practical business automation templates",
-      "Open for collaboration and partnership ideas",
+      "Unified customer and enquiry records",
+      "Real-time operational coordination",
+      "Zero unnecessary enterprise software bloat",
     ],
   },
 ];
