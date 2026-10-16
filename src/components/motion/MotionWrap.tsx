@@ -10,6 +10,7 @@ interface MotionWrapProps {
   duration?: number;
   direction?: "up" | "down" | "left" | "right" | "none";
   distance?: number;
+  once?: boolean;
 }
 
 export function MotionWrap({
@@ -19,6 +20,7 @@ export function MotionWrap({
   duration = 0.35,
   direction = "up",
   distance = 12,
+  once = true,
 }: MotionWrapProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -45,7 +47,7 @@ export function MotionWrap({
     <motion.div
       initial={getInitialPosition()}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-20px" }}
+      viewport={{ once, margin: "-20px" }}
       transition={{
         duration,
         delay,
